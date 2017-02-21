@@ -186,9 +186,10 @@ var NAVTREEINDEX1 =
 "class_geometry2d_1_1_transform_matrix.html#afdc73582efc285340016cde74af38669":[3,0,1,10,6],
 "class_geometry2d_1_1_transform_matrix.html#aff5aee7a0fabdabe363aecc0ca86a074":[3,0,1,10,16],
 "class_hacked_kicker_board.html":[3,0,28],
-"class_hacked_kicker_board.html#a7a470073e7e29c84d248b53b86aa7c27":[3,0,28,2],
-"class_hacked_kicker_board.html#ad97a027e394fc7fddc32e39e6f8f404a":[3,0,28,3],
+"class_hacked_kicker_board.html#a7a470073e7e29c84d248b53b86aa7c27":[3,0,28,3],
+"class_hacked_kicker_board.html#ad97a027e394fc7fddc32e39e6f8f404a":[3,0,28,4],
 "class_hacked_kicker_board.html#adf4a8f866b58c2ece18f8465bcb5301f":[3,0,28,1],
+"class_hacked_kicker_board.html#aeffc4865855c181cda5c114c9e12b593":[3,0,28,2],
 "class_hacked_kicker_board.html#afa47f137bfb50d591cf3a17a6929837f":[3,0,28,0],
 "class_i_o_expander_digital_in_out.html":[3,0,29],
 "class_i_o_expander_digital_in_out.html#a83c8b6dc7331ab3cd6b8fb24bcb213b3":[3,0,29,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "class_m_c_p23017.html#a3f402d0f5722dfbbfca400a36bc5d66ead0d156ad8096b42b8ee540ebb45a967b":[3,0,33,2,8],
 "class_m_c_p23017.html#a67248b8a39c498bfd3b5f32496d1f78c":[3,0,33,9],
 "class_m_c_p23017.html#a6b9fc988b1bae8bf9cd9b9082f952ee1":[3,0,33,13],
-"class_m_c_p23017.html#a722f23d7767a135c669222da836339be":[3,0,33,1],
-"class_m_c_p23017.html#a722f23d7767a135c669222da836339bea2edc7b553859d242d65404f71a6da0d3":[3,0,33,1,1]
+"class_m_c_p23017.html#a722f23d7767a135c669222da836339be":[3,0,33,1]
 };

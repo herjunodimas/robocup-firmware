@@ -1,12 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"deca__regs_8h.html#ac5ed4d9fae03e7a4518f3efc1cb945d6":[4,0,1,0,0,4,0,2,28],
-"deca__regs_8h.html#ac645974f563aa3f1ce303df8fe794481":[4,0,1,0,0,4,0,2,754],
-"deca__regs_8h.html#ac64fce881fe6b4930810091163b48438":[4,0,1,0,0,4,0,2,815],
-"deca__regs_8h.html#ac65684a8aa78451b75a53ffdda0b743e":[4,0,1,0,0,4,0,2,201],
-"deca__regs_8h.html#ac680e5ac619235287160945cac77666a":[4,0,1,0,0,4,0,2,756],
-"deca__regs_8h.html#ac6fe37f9899b0396b6f8a23241f86e69":[4,0,1,0,0,4,0,2,513],
-"deca__regs_8h.html#ac72f425d02e525862b52cf9bf8d4f89c":[4,0,1,0,0,4,0,2,503],
 "deca__regs_8h.html#ac7d9b437ab1a0eb6f2a42dbe82eefdf4":[4,0,1,0,0,4,0,2,268],
 "deca__regs_8h.html#ac83cc134209f5b84356886520498240b":[4,0,1,0,0,4,0,2,584],
 "deca__regs_8h.html#ac8aa08091d826ac34891fd7e778c56f2":[4,0,1,0,0,4,0,2,224],
@@ -84,8 +77,8 @@ var NAVTREEINDEX6 =
 "deca__regs_8h.html#add59074874babc5dc3d415324c014411":[4,0,1,0,0,4,0,2,119],
 "deca__regs_8h.html#adde0bdec35fb5f74129979b580d1b6ec":[4,0,1,0,0,4,0,2,108],
 "deca__regs_8h.html#adde65805e955073b30b2cfa69dd5f81f":[4,0,1,0,0,4,0,2,104],
-"deca__regs_8h.html#addeafaf68d2c545b595f7d2a2a98df06":[4,0,1,0,0,4,0,2,208],
 "deca__regs_8h.html#addeafaf68d2c545b595f7d2a2a98df06":[4,0,1,0,0,4,0,2,207],
+"deca__regs_8h.html#addeafaf68d2c545b595f7d2a2a98df06":[4,0,1,0,0,4,0,2,208],
 "deca__regs_8h.html#ade2e2d03570ecd64f5ed044049976bfc":[4,0,1,0,0,4,0,2,334],
 "deca__regs_8h.html#adec9e175879d14e844a3425b4de1d875":[4,0,1,0,0,4,0,2,240],
 "deca__regs_8h.html#adeeac09a1435acb863b0cd44ccf4643e":[4,0,1,0,0,4,0,2,761],
@@ -249,5 +242,12 @@ var NAVTREEINDEX6 =
 "dir_ba3baf91937e859098e5bc198cb747fd.html":[4,0,1,0,0],
 "dir_bb139609278048406308a47332543a72.html":[4,0,1,1,0,1],
 "dir_bdd9a5d540de89e9fe90efdfc6973a4f.html":[4,0,0],
-"dir_cc377981fd1d02b69253e810027bf757.html":[4,0,1,0,0,0]
+"dir_cc377981fd1d02b69253e810027bf757.html":[4,0,1,0,0,0],
+"dir_cee59dbc20d175ba3d3ad00d9c6ec89c.html":[4,0,0,0,1,0],
+"dir_d3c5fb12f0292fb6db40368d62a74434.html":[4,0,1,1,0,1,0],
+"dir_d49327e52eceed7fad4d6f302178ed16.html":[4,0,1,0,0,4,0],
+"dir_d810e9ee1bf6798e69c014f7b76afa6c.html":[4,0,1,0],
+"dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html":[4,0,1],
+"dir_da01ce70317722428be74fe7487fd8f7.html":[4,0,1,0,0,13],
+"dir_dae3b2c1b669a03b67c2743c22c3495a.html":[4,0,1,0,0,9]
 };
