@@ -252,6 +252,7 @@ int main() {
     const auto RadioTimeout = 100;
     RtosTimerHelper radioTimeoutTimer([&]() {
         radioTimeoutTimer.start(RadioTimeout);
+        InitializeCommModule();
     }, osTimerOnce);
     radioTimeoutTimer.start(RadioTimeout);
 
@@ -411,6 +412,7 @@ int main() {
 #endif
 
         Thread::wait(RJ_WATCHDOG_TIMER_VALUE * 250);
+
 
         // Pack errors into bitmask
         errorBitmask |= (!globalRadio || !globalRadio->isConnected())
