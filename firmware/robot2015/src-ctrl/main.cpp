@@ -257,6 +257,8 @@ int main() {
         // Reset radio if no RX packet in specified time
         // globalRadio->reset();
         radioTimeoutTimer.start(RadioTimeout);
+        globalRadio->reset();
+        globalRadio->setAddress(rtp::ROBOT_ADDRESS);
     }, osTimerOnce);
     radioTimeoutTimer.start(RadioTimeout);
 
