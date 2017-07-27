@@ -28,6 +28,8 @@ public:
 
     std::unique_ptr<RtosTimerHelper> serviceTimer;
 
+    DigitalOut ballSenseLed;
+
     /**
      * @brief Reflashes the program on the kicker board MCU with the file
      *     specified in the constructor.

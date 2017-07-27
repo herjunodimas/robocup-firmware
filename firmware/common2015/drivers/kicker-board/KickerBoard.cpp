@@ -7,7 +7,7 @@ std::shared_ptr<KickerBoard> KickerBoard::Instance;
 
 KickerBoard::KickerBoard(shared_ptr<SharedSPI> sharedSPI, PinName nCs,
                          PinName nReset, const string& progFilename)
-    : AVR910(sharedSPI, nCs, nReset), _filename(progFilename) {
+    : AVR910(sharedSPI, nCs, nReset), _filename(progFilename), ballSenseLed(p15) {
     //this->setSPIFrequency(32000);
     serviceTimer = std::make_unique<RtosTimerHelper>([&]() { this->service(); }, osTimerPeriodic);
 }
@@ -158,6 +158,14 @@ bool KickerBoard::send_to_kicker(uint8_t cmd, uint8_t arg, uint8_t* ret_val) {
     _ball_sensed = state & (1 << BALL_SENSE_FIELD);
     _is_breakbeam_armed = state & (1 << KICK_ON_BREAKBEAM_FIELD);
     _is_kicking = state & (1 << KICKING_FIELD);
+
+    if (_ball_sensed) {
+        ballSenseLed = 1;
+    } else {
+        ballSenseLed = 0;
+    }
+
+    printf("Ball sense: %d\r\n", _ball_sensed);
 
     if (ret_val != nullptr) {
         *ret_val = ret;
