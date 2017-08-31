@@ -10,19 +10,25 @@
 
 #define NO_COMMAND 0
 
-#define TIMING_CONSTANT 125
+// for timer loop that handles kicking timing
+#define TIMING_CONSTANT 100 // with clk speed at 1 MHz, 1 clk == 1 us, update every 100 us, 0.1 ms
+#define CLK_SPEED_HZ 1000000
+#define TIMER_DELTA ((1.0f * TIMING_CONSTANT / CLK_SPEED_HZ) * 1000.0f);
+
+// for main loop that handles ball sense readings
+#define LOOP_DELTA 100
+
 #define VOLTAGE_READ_DELAY_MS 40
 
-// get different ball reading for 20 * 100 us = 2 ms before switching
 #define BALL_SENSE_MAX_SAMPLES 5
 
-// Used to time kick and chip durations
-volatile int pre_kick_cooldown_ = 0;
-volatile int millis_left_ = 0;
-volatile int post_kick_cooldown_ = 0;
-volatile int kick_wait = 0;
+// Msed to time kick and chip durations
+volatile float pre_kick_cooldown_ = 0.0f;
+volatile float millis_left_ = 0.0f;
+volatile float post_kick_cooldown_ = 0.0f;
+volatile float kick_wait = 0.0f;
 
-// Used to keep track of current button state
+// Msed to keep track of current button state
 volatile int kick_db_down_ = 0;
 volatile int chip_db_down_ = 0;
 volatile int charge_db_down_ = 0;
@@ -52,20 +58,20 @@ unsigned time = 0;
 uint8_t execute_cmd(uint8_t, uint8_t);
 
 bool is_kicking() {
-    return pre_kick_cooldown_ || millis_left_ || post_kick_cooldown_ || kick_wait;
+    return pre_kick_cooldown_ > 0 || millis_left_ > 0 || post_kick_cooldown_ > 0 || kick_wait > 0;
 }
 
 void kick(uint8_t strength) {
     if (is_kicking()) return;
-    pre_kick_cooldown_ = 5;
+    pre_kick_cooldown_ = 5.0f;
     // minimum of 6 ms, we were breaking kickers with low duty cycles
     // maximum of 6 + 7 == 13 ms
     //millis_left_ = (int) ((strength / 255.0) * 6.0) + 7;
-    millis_left_ = 13; // always full kick speed
-    post_kick_cooldown_ = 5;
-    kick_wait = 2000;
+    millis_left_ = 1.0f;
+    post_kick_cooldown_ = 5.0f;
+    kick_wait = 2000.0f;
 
-    TCCR0B |= _BV(CS01);     // start timer /8 prescale
+    TCCR0B |= _BV(CS00);     // start timer, no prescale
 }
 
 void init();
@@ -86,7 +92,6 @@ uint8_t get_voltage() {
 void main() {
     init();
 
-    // needs to be int to force voltage_accum calculation to use ints
     const int kalpha = 32;
 
     // We handle voltage readings here
@@ -94,7 +99,7 @@ void main() {
         // get a voltage reading by weighing in a new reading, same concept as
         // TCP RTT estimates (exponentially weighted sum)
 
-        if (time % 400 == 0) {
+        if (time % (VOLTAGE_READ_DELAY_MS * 10) == 0) {
             int voltage_accum =
                 (255 - kalpha) * last_voltage_ + kalpha * get_voltage();
             last_voltage_ = voltage_accum / 255;
@@ -133,7 +138,7 @@ void main() {
             kick_on_breakbeam_ = false;
         }
 
-        _delay_us(100); // 0.1 ms
+        _delay_us(LOOP_DELTA); // 0.1 ms
     }
 }
 
@@ -167,7 +172,6 @@ void init() {
     // enable interrupts on debug buttons
     PCMSK0 = _BV(INT_DB_KICK) | _BV(INT_DB_CHG);
 
-
     // Set low bits corresponding to pin we read from
     ADMUX |= _BV(ADLAR) | 0x00; // connect PA0 (V_MONITOR_PIN) to ADC
 
@@ -178,9 +182,8 @@ void init() {
     TCCR0A |= _BV(WGM01);
 
     // OCR0A is max val of timer before reset
-    // we need 1000 clocks at 1 Mhz to get 1 millisecond
-    // if we prescale by 8, then we need 125 on timer to get 1 ms exactly
-    OCR0A = TIMING_CONSTANT;  // reset every millisecond
+    // we need 100 clocks at 1 Mhz to get 0.1 millisecond
+    OCR0A = TIMING_CONSTANT;  // reset every 100 us
 
     // ensure ADC isn't shut off
     PRR &= ~_BV(PRADC);
@@ -192,7 +195,7 @@ void init() {
 
 /*
  * SPI Interrupt. Triggers when we have a new byte available, it'll be
- * stored in SPDR. Writing a response also occurs using the SPDR register.
+ * stored in SPDR. Writing a response also occurs msing the SPDR register.
  */
 ISR(SPI_STC_vect) {
     uint8_t recv_data = SPDR;
@@ -201,7 +204,7 @@ ISR(SPI_STC_vect) {
     // increment our received byte count and take appropriate action
     if (byte_cnt == 0) {
         cur_command_ = recv_data;
-        // kicker status fields
+        // kicker statms fields
         SPDR |= ACK;
     } else if (byte_cnt == 1) {
         // execute the currently set command with
@@ -256,23 +259,24 @@ ISR(PCINT0_vect) {
  */
 ISR(TIMER0_COMPA_vect) {
     if (pre_kick_cooldown_ > 0) {
-        pre_kick_cooldown_--;
         // disable charging
-        charge_allowed_ = false;
+        charge_allowed_ = false; // prevent main loop from changing it
+        PORTB &= ~(_BV(CHARGE_PIN)); // stop charging immediately
+        pre_kick_cooldown_ -= TIMER_DELTA;
     } else if (millis_left_ > 0) {
-        millis_left_--;
         PORTB |= _BV(KICK_PIN);  // set KICK pin
+        millis_left_ -= TIMER_DELTA;
     } else if (post_kick_cooldown_ > 0) {
-        // kick is done
+        // kick is done, keep it off
         PORTB &= ~_BV(KICK_PIN);
-        post_kick_cooldown_--;
+        post_kick_cooldown_ -= TIMER_DELTA;
     } else if (kick_wait > 0) {
-        // don't allow super repeated kicking
-        kick_wait--;
-        charge_allowed_ = true;
+        // don't allow super repeated kicking, just chill in this loop for a bit
+        charge_allowed_ = true; // let main loop take care of setting it high
+        kick_wait -= TIMER_DELTA;
     } else {
         // stop prescaled timer
-        TCCR0B &= ~_BV(CS01);
+        TCCR0B &= ~_BV(CS00);
     }
 }
 
@@ -284,7 +288,7 @@ ISR(TIMER0_COMPA_vect) {
  */
 uint8_t execute_cmd(uint8_t cmd, uint8_t arg) {
     // if we don't change ret_val by setting it to voltage or
-    // something, then we'll just return the command we got as
+    // something, then we'll jmst return the command we got as
     // an acknowledgement.
     uint8_t ret_val = BLANK;
 
@@ -320,7 +324,7 @@ uint8_t execute_cmd(uint8_t cmd, uint8_t arg) {
 
         case PING_CMD:
             ret_val = 0xFF;
-            // do nothing, ping is just a way to check if the kicker
+            // do nothing, ping is jmst a way to check if the kicker
             // is connected by checking the returned command ack from
             // earlier.
             break;
