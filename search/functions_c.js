@@ -5,5 +5,8 @@ var searchData=
   ['nearpoint',['nearPoint',['../class_geometry2d_1_1_point.html#aaea85ab2cfa8aeaa5993d806d98733bd',1,'Geometry2d::Point']]],
   ['neostrip',['NeoStrip',['../class_neo_strip.html#a6e3142ef98589c57c55e7019e83d8076',1,'NeoStrip']]],
   ['norm',['norm',['../class_geometry2d_1_1_point.html#aea4ee6f222f9a565673493b46a231c13',1,'Geometry2d::Point']]],
-  ['normalized',['normalized',['../class_geometry2d_1_1_point.html#ae2d04df89e167deb202c68e78c7dbc1d',1,'Geometry2d::Point']]]
+  ['normalized',['normalized',['../class_geometry2d_1_1_point.html#ae2d04df89e167deb202c68e78c7dbc1d',1,'Geometry2d::Point']]],
+  ['numopensockets',['numOpenSockets',['../class_comm_module.html#a9af7d34f67fe241c8068b90cc4d612c3',1,'CommModule']]],
+  ['numrxpackets',['numRxPackets',['../class_comm_module.html#adbde7a8dc03cc44750ee5bf504907286',1,'CommModule']]],
+  ['numtxpackets',['numTxPackets',['../class_comm_module.html#a27ce2217c37a3fa7dfed055aab5882ed',1,'CommModule']]]
 ];

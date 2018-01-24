@@ -125,6 +125,8 @@ $(document).ready(function(){initNavTree('class_robot_model.html','');});
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_robot_model__coll__graph.png" border="0" usemap="#_robot_model_coll__map" alt="Collaboration graph"/></div>
+<map name="_robot_model_coll__map" id="_robot_model_coll__map">
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -136,31 +138,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a2009a91f6292b84884459b011b751e38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2009a91f6292b84884459b011b751e38"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_model.html#a2009a91f6292b84884459b011b751e38">WheelRadius</a></td></tr>
-<tr class="memdesc:a2009a91f6292b84884459b011b751e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Radius of omni-wheel (in meters) <br /></td></tr>
-<tr class="separator:a2009a91f6292b84884459b011b751e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae62e5c0642ce8ffff188a697f87900dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae62e5c0642ce8ffff188a697f87900dc"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_model.html#ae62e5c0642ce8ffff188a697f87900dc">WheelDist</a></td></tr>
-<tr class="memdesc:ae62e5c0642ce8ffff188a697f87900dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance from center of robot to center of wheel. <br /></td></tr>
-<tr class="separator:ae62e5c0642ce8ffff188a697f87900dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa179c8e2dcff4f821cb076ff96a4f805"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa179c8e2dcff4f821cb076ff96a4f805"></a>
-std::array&lt; float, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_model.html#aa179c8e2dcff4f821cb076ff96a4f805">WheelAngles</a></td></tr>
-<tr class="memdesc:aa179c8e2dcff4f821cb076ff96a4f805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wheel angles (in radians) measured between +x axis and wheel axle. <br /></td></tr>
-<tr class="separator:aa179c8e2dcff4f821cb076ff96a4f805"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7466b454bf9eca5de94394664ca1eb24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7466b454bf9eca5de94394664ca1eb24"></a>
-Eigen::Matrix&lt; float, 4, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_model.html#a7466b454bf9eca5de94394664ca1eb24">BotToWheel</a></td></tr>
-<tr class="memdesc:a7466b454bf9eca5de94394664ca1eb24"><td class="mdescLeft">&#160;</td><td class="mdescRight">wheelSpeeds = BotToWheel * V_bot <br /></td></tr>
-<tr class="separator:a7466b454bf9eca5de94394664ca1eb24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae402759dd96abcf5c840633972a67628"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae402759dd96abcf5c840633972a67628"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_model.html#ae402759dd96abcf5c840633972a67628">WheelRadius</a></td></tr>
+<tr class="memdesc:ae402759dd96abcf5c840633972a67628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Radius of omni-wheel (in meters) <br /></td></tr>
+<tr class="separator:ae402759dd96abcf5c840633972a67628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8da558c04d41619982d546a24b7d0d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8da558c04d41619982d546a24b7d0d0"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_model.html#ab8da558c04d41619982d546a24b7d0d0">WheelDist</a></td></tr>
+<tr class="memdesc:ab8da558c04d41619982d546a24b7d0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance from center of robot to center of wheel. <br /></td></tr>
+<tr class="separator:ab8da558c04d41619982d546a24b7d0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc445a62a4f3b4f5deda26e2a1b01c15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc445a62a4f3b4f5deda26e2a1b01c15"></a>
+std::array&lt; double, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_model.html#adc445a62a4f3b4f5deda26e2a1b01c15">WheelAngles</a></td></tr>
+<tr class="memdesc:adc445a62a4f3b4f5deda26e2a1b01c15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wheel angles (in radians) measured between +x axis and wheel axle. <br /></td></tr>
+<tr class="separator:adc445a62a4f3b4f5deda26e2a1b01c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57cfae1ca9a6b62813f60e303b88e65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab57cfae1ca9a6b62813f60e303b88e65"></a>
+Eigen::Matrix&lt; double, 4, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_model.html#ab57cfae1ca9a6b62813f60e303b88e65">BotToWheel</a></td></tr>
+<tr class="memdesc:ab57cfae1ca9a6b62813f60e303b88e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">wheelSpeeds = BotToWheel * V_bot <br /></td></tr>
+<tr class="separator:ab57cfae1ca9a6b62813f60e303b88e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc8de2fc6bd506d4d35642b8b60c983"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fc8de2fc6bd506d4d35642b8b60c983"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_model.html#a4fc8de2fc6bd506d4d35642b8b60c983">DutyCycleMultiplier</a></td></tr>
-<tr class="memdesc:a4fc8de2fc6bd506d4d35642b8b60c983"><td class="mdescLeft">&#160;</td><td class="mdescRight">(wheel rad/s desired) * DutyCycleMultiplier = duty cycle Note that this is an approximation, as the relationship isn't exactly linear <br /></td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>DutyCycleMultiplier</b> = 2.0f</td></tr>
 <tr class="separator:a4fc8de2fc6bd506d4d35642b8b60c983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Model parameters for a robot. Used by the controls system. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>firmware/robot2015/src-ctrl/modules/control/<a class="el" href="_robot_model_8hpp_source.html">RobotModel.hpp</a></li>
+<li>src/control/modules/control/<a class="el" href="_robot_model_8hpp_source.html">RobotModel.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -168,7 +169,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_robot_model.html">RobotModel</a></li>
-    <li class="footer">Generated on Wed Apr 19 2017 00:50:15 for GT RoboCup SSL by
+    <li class="footer">Generated on Wed Jan 24 2018 01:34:58 for GT RoboCup SSL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

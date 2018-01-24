@@ -159,8 +159,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad1717b6ab05e7c0aba237a7c147354ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the part number.  <a href="#ad1717b6ab05e7c0aba237a7c147354ae">More...</a><br /></td></tr>
 <tr class="separator:ad1717b6ab05e7c0aba237a7c147354ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_shared_s_p_i_device"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_shared_s_p_i_device')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_shared_s_p_i_device.html">SharedSPIDevice&lt;&gt;</a></td></tr>
-<tr class="memitem:a6213cd1a7917762f310dc2abe66d3897 inherit pub_methods_class_shared_s_p_i_device"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shared_s_p_i_device.html#a6213cd1a7917762f310dc2abe66d3897">SharedSPIDevice</a> (std::shared_ptr&lt; <a class="el" href="class_shared_s_p_i.html">SharedSPI</a> &gt; spi, mbed::DigitalOutcs, bool csInverted=true)</td></tr>
-<tr class="separator:a6213cd1a7917762f310dc2abe66d3897 inherit pub_methods_class_shared_s_p_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0126fde5188f1bc0b05e973e02892490 inherit pub_methods_class_shared_s_p_i_device"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0126fde5188f1bc0b05e973e02892490"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SharedSPIDevice</b> (SpiPtrT spi, mbed::DigitalOutcs, bool csInverted=true)</td></tr>
+<tr class="separator:a0126fde5188f1bc0b05e973e02892490 inherit pub_methods_class_shared_s_p_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f86eefe59ee13189c867424f017965e inherit pub_methods_class_shared_s_p_i_device"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f86eefe59ee13189c867424f017965e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>chipSelect</b> ()</td></tr>
 <tr class="separator:a9f86eefe59ee13189c867424f017965e inherit pub_methods_class_shared_s_p_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,13 +187,17 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>readRegister</b> (int 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_shared_s_p_i_device"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_shared_s_p_i_device')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_shared_s_p_i_device.html">SharedSPIDevice&lt;&gt;</a></td></tr>
+<tr class="memitem:a70622f256e4c773cfa5aaf3ff9fbaacb inherit pub_types_class_shared_s_p_i_device"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70622f256e4c773cfa5aaf3ff9fbaacb"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SpiPtrT</b> = std::shared_ptr&lt; <a class="el" href="class_shared_s_p_i.html">SharedSPI</a> &gt;</td></tr>
+<tr class="separator:a70622f256e4c773cfa5aaf3ff9fbaacb inherit pub_types_class_shared_s_p_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_shared_s_p_i_device"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_shared_s_p_i_device')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_shared_s_p_i_device.html">SharedSPIDevice&lt;&gt;</a></td></tr>
-<tr class="memitem:a8519100bec4c669ed791ef69c87ffffc inherit pro_attribs_class_shared_s_p_i_device"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8519100bec4c669ed791ef69c87ffffc"></a>
-std::shared_ptr&lt; <a class="el" href="class_shared_s_p_i.html">SharedSPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_spi</b></td></tr>
-<tr class="separator:a8519100bec4c669ed791ef69c87ffffc inherit pro_attribs_class_shared_s_p_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4a7a211ca0d7c6b28fb9148fdf218f2 inherit pro_attribs_class_shared_s_p_i_device"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4a7a211ca0d7c6b28fb9148fdf218f2"></a>
-mbed::DigitalOut&#160;</td><td class="memItemRight" valign="bottom"><b>_cs</b></td></tr>
-<tr class="separator:af4a7a211ca0d7c6b28fb9148fdf218f2 inherit pro_attribs_class_shared_s_p_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04659b0f94c1398332a3a88040884cb0 inherit pro_attribs_class_shared_s_p_i_device"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04659b0f94c1398332a3a88040884cb0"></a>
+SpiPtrT&#160;</td><td class="memItemRight" valign="bottom"><b>m_spi</b></td></tr>
+<tr class="separator:a04659b0f94c1398332a3a88040884cb0 inherit pro_attribs_class_shared_s_p_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0479e1bb54815b63899c124693116ec inherit pro_attribs_class_shared_s_p_i_device"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0479e1bb54815b63899c124693116ec"></a>
+mbed::DigitalOut&#160;</td><td class="memItemRight" valign="bottom"><b>m_cs</b></td></tr>
+<tr class="separator:ac0479e1bb54815b63899c124693116ec inherit pro_attribs_class_shared_s_p_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>AVR910 ISP. </p>
@@ -425,8 +430,8 @@ mbed::DigitalOut&#160;</td><td class="memItemRight" valign="bottom"><b>_cs</b></
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>firmware/common2015/drivers/avr-isp/<a class="el" href="_a_v_r910_8hpp_source.html">AVR910.hpp</a></li>
-<li>firmware/common2015/drivers/avr-isp/AVR910.cpp</li>
+<li>lib/drivers/avr-isp/<a class="el" href="_a_v_r910_8hpp_source.html">AVR910.hpp</a></li>
+<li>lib/drivers/avr-isp/AVR910.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -434,7 +439,7 @@ mbed::DigitalOut&#160;</td><td class="memItemRight" valign="bottom"><b>_cs</b></
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_a_v_r910.html">AVR910</a></li>
-    <li class="footer">Generated on Wed Apr 19 2017 00:50:15 for GT RoboCup SSL by
+    <li class="footer">Generated on Wed Jan 24 2018 01:34:58 for GT RoboCup SSL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

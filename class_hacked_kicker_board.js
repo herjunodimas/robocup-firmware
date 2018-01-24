@@ -4,5 +4,6 @@ var class_hacked_kicker_board =
     [ "_stopKicking", "class_hacked_kicker_board.html#adf4a8f866b58c2ece18f8465bcb5301f", null ],
     [ "canKick", "class_hacked_kicker_board.html#aeffc4865855c181cda5c114c9e12b593", null ],
     [ "kick", "class_hacked_kicker_board.html#a7a470073e7e29c84d248b53b86aa7c27", null ],
+    [ "readVoltage", "class_hacked_kicker_board.html#aa2b7a88e37dd028bf8479c3be2a29856", null ],
     [ "MIN_CHARGE_TIME", "class_hacked_kicker_board.html#ad97a027e394fc7fddc32e39e6f8f404a", null ]
 ];

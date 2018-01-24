@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['fake_5fmbed',['fake_mbed',['../namespacefake__mbed.html',1,'']]],
   ['field_5fdimensions',['Field_Dimensions',['../struct_field___dimensions.html',1,'']]],
   ['firfilter',['FIRFilter',['../class_f_i_r_filter.html',1,'']]],
   ['flash',['flash',['../class_kicker_board.html#a61455be0828684366a62465ddb33fdb5',1,'KickerBoard']]],

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['kick',['kick',['../class_kicker_board.html#ab282f9e2afe7a4d55696c423e0d15d7c',1,'KickerBoard']]],
-  ['kickerboard',['KickerBoard',['../class_kicker_board.html#af920fd082afa3bdae58840505a9223da',1,'KickerBoard']]]
+  ['kick',['kick',['../class_kicker_board.html#ad09cd66a72a0d24f1a8176cea71397ff',1,'KickerBoard']]],
+  ['kickerboard',['KickerBoard',['../class_kicker_board.html#a78e867e57f538b46ff9cfafd0e28eb1a',1,'KickerBoard']]]
 ];

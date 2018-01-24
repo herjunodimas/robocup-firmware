@@ -138,7 +138,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A software implemented SPI that can use any digital pins. </p>
 <p>Useful when don't want to share a single SPI hardware among attached devices or when pinout doesn't match exactly to the target's SPI pins</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;mbed.h&quot;</span></div><div class="line"><span class="preprocessor">#include &quot;software-spi.hpp&quot;</span></div><div class="line"></div><div class="line"><a class="code" href="class_software_s_p_i.html">SoftwareSPI</a> spi(p5, p6, p7); <span class="comment">// mosi, miso, sck</span></div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main()</div><div class="line">{</div><div class="line">    DigitalOut cs(p8);</div><div class="line">    spi.format(8, 0);</div><div class="line"></div><div class="line">    cs.write(0);</div><div class="line">    spi.write(0x9f);</div><div class="line">    <span class="keywordtype">int</span> jedecid = (spi.write(0) &lt;&lt; 16) | (spi.write(0) &lt;&lt; 8) | spi.write(0);</div><div class="line">    cs.write(1);</div><div class="line">}</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;Mbed.hpp&quot;</span></div><div class="line"><span class="preprocessor">#include &quot;software-spi.hpp&quot;</span></div><div class="line"></div><div class="line"><a class="code" href="class_software_s_p_i.html">SoftwareSPI</a> spi(p5, p6, p7); <span class="comment">// mosi, miso, sck</span></div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main()</div><div class="line">{</div><div class="line">    DigitalOut cs(p8);</div><div class="line">    spi.format(8, 0);</div><div class="line"></div><div class="line">    cs.write(0);</div><div class="line">    spi.write(0x9f);</div><div class="line">    <span class="keywordtype">int</span> jedecid = (spi.write(0) &lt;&lt; 16) | (spi.write(0) &lt;&lt; 8) | spi.write(0);</div><div class="line">    cs.write(1);</div><div class="line">}</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0fcfd3817236c348ed837a2d62b30aa7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -248,8 +248,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>firmware/common2015/drivers/software-spi/<a class="el" href="software-spi_8hpp_source.html">software-spi.hpp</a></li>
-<li>firmware/common2015/drivers/software-spi/software-spi.cpp</li>
+<li>lib/drivers/software-spi/<a class="el" href="software-spi_8hpp_source.html">software-spi.hpp</a></li>
+<li>lib/drivers/software-spi/software-spi.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -257,7 +257,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_software_s_p_i.html">SoftwareSPI</a></li>
-    <li class="footer">Generated on Wed Apr 19 2017 00:50:15 for GT RoboCup SSL by
+    <li class="footer">Generated on Wed Jan 24 2018 01:34:58 for GT RoboCup SSL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

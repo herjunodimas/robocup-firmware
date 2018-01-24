@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>GT RoboCup SSL: RotarySelector&lt; DIGITAL_IN &gt; Class Template Reference</title>
+<title>GT RoboCup SSL: RotarySelector&lt; DIGITAL_IN, NUM_PINS &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -110,10 +110,9 @@ $(document).ready(function(){initNavTree('class_rotary_selector.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_rotary_selector-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">RotarySelector&lt; DIGITAL_IN &gt; Class Template Reference</div>  </div>
+<div class="title">RotarySelector&lt; DIGITAL_IN, NUM_PINS &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -122,39 +121,33 @@ $(document).ready(function(){initNavTree('class_rotary_selector.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0052ef9ea13399b1525df0bfbbf96111"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rotary_selector.html#a0052ef9ea13399b1525df0bfbbf96111">RotarySelector</a> (std::array&lt; DIGITAL_IN, NUM_PINS &gt; pins)</td></tr>
-<tr class="memdesc:a0052ef9ea13399b1525df0bfbbf96111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a RotarySelector with the given digital input pins.  <a href="#a0052ef9ea13399b1525df0bfbbf96111">More...</a><br /></td></tr>
-<tr class="separator:a0052ef9ea13399b1525df0bfbbf96111"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afabc6dc46e1d05f772ce49081845e3b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afabc6dc46e1d05f772ce49081845e3b8"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rotary_selector.html#afabc6dc46e1d05f772ce49081845e3b8">read</a> ()</td></tr>
-<tr class="memdesc:afabc6dc46e1d05f772ce49081845e3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the reading (0x0 - 0xF) of the NUM_PINS wires. <br /></td></tr>
-<tr class="separator:afabc6dc46e1d05f772ce49081845e3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a92c19c13ff1b75cc0cdfc2f87d1f5e56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92c19c13ff1b75cc0cdfc2f87d1f5e56"></a>
-static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>NUM_PINS</b> = 4</td></tr>
-<tr class="separator:a92c19c13ff1b75cc0cdfc2f87d1f5e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0ae84128b6d0db7a36bb6ca0036f021"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rotary_selector.html#aa0ae84128b6d0db7a36bb6ca0036f021">RotarySelector</a> (std::array&lt; DIGITAL_IN, NUM_PINS &gt; pins)</td></tr>
+<tr class="memdesc:aa0ae84128b6d0db7a36bb6ca0036f021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a RotarySelector with the given digital input pins.  <a href="#aa0ae84128b6d0db7a36bb6ca0036f021">More...</a><br /></td></tr>
+<tr class="separator:aa0ae84128b6d0db7a36bb6ca0036f021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a493cc623892fe610d951f8c192720246"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a493cc623892fe610d951f8c192720246"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rotary_selector.html#a493cc623892fe610d951f8c192720246">read</a> ()</td></tr>
+<tr class="memdesc:a493cc623892fe610d951f8c192720246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the reading (0x0 - 0xF) of the NUM_PINS wires. <br /></td></tr>
+<tr class="separator:a493cc623892fe610d951f8c192720246"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename DIGITAL_IN&gt;<br />
-class RotarySelector&lt; DIGITAL_IN &gt;</h3>
+<div class="textblock"><h3>template&lt;typename DIGITAL_IN, size_t NUM_PINS = 4&gt;<br />
+class RotarySelector&lt; DIGITAL_IN, NUM_PINS &gt;</h3>
 
 <p>This class facilitates reading the value from a rotary selector. </p>
 <p>This class is templated so that it generalizes I/O functionality to not only IO expander pins but also standard mBed I/O pins.</p>
 <p>Example usage: RotarySelector&lt;DigitalIn&gt; selector({p5, p6, p7, p8}); printf("selector value: %d\r\n", selector.read()); </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0052ef9ea13399b1525df0bfbbf96111"></a>
+<a class="anchor" id="aa0ae84128b6d0db7a36bb6ca0036f021"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DIGITAL_IN &gt; </div>
+template&lt;typename DIGITAL_IN , size_t NUM_PINS = 4&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_rotary_selector.html">RotarySelector</a>&lt; DIGITAL_IN &gt;::<a class="el" href="class_rotary_selector.html">RotarySelector</a> </td>
+          <td class="memname"><a class="el" href="class_rotary_selector.html">RotarySelector</a>&lt; DIGITAL_IN, NUM_PINS &gt;::<a class="el" href="class_rotary_selector.html">RotarySelector</a> </td>
           <td>(</td>
           <td class="paramtype">std::array&lt; DIGITAL_IN, NUM_PINS &gt;&#160;</td>
           <td class="paramname"><em>pins</em></td><td>)</td>
@@ -179,7 +172,7 @@ template&lt;typename DIGITAL_IN &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>firmware/common2015/drivers/rotarySelector/<a class="el" href="_rotary_selector_8hpp_source.html">RotarySelector.hpp</a></li>
+<li>lib/drivers/rotarySelector/<a class="el" href="_rotary_selector_8hpp_source.html">RotarySelector.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -187,7 +180,7 @@ template&lt;typename DIGITAL_IN &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_rotary_selector.html">RotarySelector</a></li>
-    <li class="footer">Generated on Wed Apr 19 2017 00:50:15 for GT RoboCup SSL by
+    <li class="footer">Generated on Wed Jan 24 2018 01:34:58 for GT RoboCup SSL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

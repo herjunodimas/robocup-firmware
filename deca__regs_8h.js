@@ -380,6 +380,7 @@ var deca__regs_8h =
     [ "GPIO_MSGP6_MASK", "deca__regs_8h.html#a4212ab0a5860a84d1c597ebf8800eb45", null ],
     [ "GPIO_MSGP7_MASK", "deca__regs_8h.html#a52313189e523a949daf25ea94b61fa1f", null ],
     [ "GPIO_MSGP8_MASK", "deca__regs_8h.html#afed0a8eda4af2308942bd5f0c7db2b6e", null ],
+    [ "GPIO_PIN0_RXOKLED", "deca__regs_8h.html#a9dbdecbc4797b25ca2ecb4bc71eb0ce2", null ],
     [ "GPIO_PIN2_RXLED", "deca__regs_8h.html#ad56518934d9df6b3cbc4d291c2ffb45e", null ],
     [ "GPIO_PIN3_TXLED", "deca__regs_8h.html#af589f9554083807097b46446ab9eaefa", null ],
     [ "GPIO_PIN4_EXTPA", "deca__regs_8h.html#a2b29960bd744571e8bb7415100dedad8", null ],

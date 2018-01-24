@@ -1,5 +1,5 @@
 var class_rotary_selector =
 [
-    [ "RotarySelector", "class_rotary_selector.html#a0052ef9ea13399b1525df0bfbbf96111", null ],
-    [ "read", "class_rotary_selector.html#afabc6dc46e1d05f772ce49081845e3b8", null ]
+    [ "RotarySelector", "class_rotary_selector.html#aa0ae84128b6d0db7a36bb6ca0036f021", null ],
+    [ "read", "class_rotary_selector.html#a493cc623892fe610d951f8c192720246", null ]
 ];

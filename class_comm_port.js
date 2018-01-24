@@ -1,13 +1,15 @@
 var class_comm_port =
 [
-    [ "CommPort", "class_comm_port.html#a5f8e26fbcbb1da43f6805812794c481e", null ],
-    [ "resetPacketCount", "class_comm_port.html#aa4bb29578dcd3533399caf653e499cdb", null ],
-    [ "rxCallback", "class_comm_port.html#a4fd6eb7e55d79c849f7d061e1ad08fb3", null ],
-    [ "rxCallback", "class_comm_port.html#a748480f621d64461bc1ad3edbee99591", null ],
-    [ "setRxCallback", "class_comm_port.html#a210bacdbaa9fc470420771077b93569a", null ],
-    [ "setTxCallback", "class_comm_port.html#a46862fffa6a9fd0646abd05eb3e66738", null ],
-    [ "txCallback", "class_comm_port.html#ab3829321c8d4c95568c9e53836625134", null ],
-    [ "txCallback", "class_comm_port.html#a26e75f23d1ed21b6f1a2dd96a3653b65", null ],
-    [ "rxCount", "class_comm_port.html#a4be439fd281c8fc726056563f774296f", null ],
-    [ "txCount", "class_comm_port.html#af29948426bfaaf9a2b104c14c21402fc", null ]
+    [ "RxCallbackT", "class_comm_port.html#a17edc1139ac22422c7b562b21e60df8a", null ],
+    [ "TxCallbackT", "class_comm_port.html#adb702c3d76226c51f7490cb0b80bfd14", null ],
+    [ "CommPort", "class_comm_port.html#a1b040d52a2d523303ebb4aeada6aa060", null ],
+    [ "getRxCallback", "class_comm_port.html#a960fc6d28d11ad5c32dced421e79bf10", null ],
+    [ "getRxCount", "class_comm_port.html#a7021a70ceddaf0e7c272a37f6f5df38d", null ],
+    [ "getTxCallback", "class_comm_port.html#aedfd535d56b385149a411892d4d4da4d", null ],
+    [ "getTxCount", "class_comm_port.html#a68035cccd4241e1ec33ffaa0c2e71404", null ],
+    [ "hasRxCallback", "class_comm_port.html#a900797c988a7464806369f929808bf2c", null ],
+    [ "hasTxCallback", "class_comm_port.html#a581cbb48feb2876833e341031f55523d", null ],
+    [ "resetCounts", "class_comm_port.html#a867160e60b64cecce249a06113f52833", null ],
+    [ "setRxCallback", "class_comm_port.html#a3f900aa875b164c5018505e7ebf031e2", null ],
+    [ "setTxCallback", "class_comm_port.html#ad2a88322dd50b780f5ca2245c9d7a598", null ]
 ];

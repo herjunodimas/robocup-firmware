@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['deca_5fsleep',['deca_sleep',['../classdw1000__api.html#aecc468bd72488f23e298ed7cdab4b151',1,'dw1000_api::deca_sleep()'],['../class_decawave.html#a236671e1b2b5e8faf6316099c959eead',1,'Decawave::deca_sleep()']]],
-  ['decamutexoff',['decamutexoff',['../classdw1000__api.html#a265f25f599cf452f880ef3e4c4ece62e',1,'dw1000_api::decamutexoff()'],['../class_decawave.html#ae129a4bb71309e639106aec6c3da51ff',1,'Decawave::decamutexoff()']]],
-  ['decamutexon',['decamutexon',['../classdw1000__api.html#a9ab9cdf72847a8da9deb27cdf4b5af5d',1,'dw1000_api::decamutexon()'],['../class_decawave.html#a37369e212cddd16c75c12adf4a070433',1,'Decawave::decamutexon()']]],
+  ['deca_5fsleep',['deca_sleep',['../classdw1000__api.html#aecc468bd72488f23e298ed7cdab4b151',1,'dw1000_api']]],
+  ['decamutexoff',['decamutexoff',['../classdw1000__api.html#a265f25f599cf452f880ef3e4c4ece62e',1,'dw1000_api']]],
+  ['decamutexon',['decamutexon',['../classdw1000__api.html#a9ab9cdf72847a8da9deb27cdf4b5af5d',1,'dw1000_api::decamutexon()'],['../class_decawave.html#a13f900fbe97c6748d3b48b263898747f',1,'Decawave::decamutexon()']]],
   ['detachinputhandler',['detachInputHandler',['../class_console.html#ad4473996959833d5133307a0aca2438a',1,'Console']]],
   ['direction',['direction',['../class_geometry2d_1_1_point.html#a6f666e729164f1aa25581b8e00fe8f43',1,'Geometry2d::Point']]],
   ['distto',['distTo',['../class_geometry2d_1_1_line.html#a673915dcabfebfe18e045b1913e4dfe1',1,'Geometry2d::Line::distTo()'],['../class_geometry2d_1_1_point.html#afaf5a9b8ba1d58b34051a3bce38c1ad1',1,'Geometry2d::Point::distTo()']]],

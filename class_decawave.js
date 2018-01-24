@@ -1,18 +1,14 @@
 var class_decawave =
 [
-    [ "Decawave", "class_decawave.html#ac9403c3b716826fad861b4efb1c36970", null ],
-    [ "deca_sleep", "class_decawave.html#a236671e1b2b5e8faf6316099c959eead", null ],
-    [ "decamutexoff", "class_decawave.html#ae129a4bb71309e639106aec6c3da51ff", null ],
-    [ "decamutexon", "class_decawave.html#a37369e212cddd16c75c12adf4a070433", null ],
-    [ "getData", "class_decawave.html#a9410d72878ebd58ad08b6e92ed106b60", null ],
-    [ "isConnected", "class_decawave.html#a947bf9a8c2e95e67bde8d6e3f3f640d0", null ],
-    [ "logSPI", "class_decawave.html#ab0b3f6b74ef5fa9622f96ea3f55f21d1", null ],
-    [ "printStuff", "class_decawave.html#a90a2b8674e34f82bf5d79a1a393ea62d", null ],
-    [ "readfromspi", "class_decawave.html#ab1f6399c9227b0c85ab579fdb08cd055", null ],
-    [ "reset", "class_decawave.html#af89a75a4b6e8d6fba641c07b0d72100f", null ],
-    [ "selfTest", "class_decawave.html#a657220843ee6216e736a2cbf30600eb1", null ],
-    [ "sendPacket", "class_decawave.html#accfcb002d00a2cd5f1f41e288ce373f2", null ],
-    [ "setAddress", "class_decawave.html#abdaa7585aac622eed3b243dc677bb6a8", null ],
+    [ "Decawave", "class_decawave.html#a58a560820079ebcfcde99d27dd47661d", null ],
+    [ "decamutexon", "class_decawave.html#a13f900fbe97c6748d3b48b263898747f", null ],
+    [ "getData", "class_decawave.html#af0e4a39f04cd2052ba051761426202bc", null ],
+    [ "isConnected", "class_decawave.html#a2a67d261a5f2cc0d7381cc18075480e4", null ],
+    [ "readfromspi", "class_decawave.html#abbf17a3f1c66e52ecb9a6b770cd4fa7d", null ],
+    [ "reset", "class_decawave.html#a7729204f526c43451b688c00641c21e8", null ],
+    [ "selfTest", "class_decawave.html#a358520a538d53c0d1c56071b273cea2b", null ],
+    [ "sendPacket", "class_decawave.html#af7c1f9dc18465667ac3d5d2dfc31ccac", null ],
+    [ "setAddress", "class_decawave.html#abeeb6b1ece5ba6b60985fa5323a71bbc", null ],
     [ "setLED", "class_decawave.html#ab963e6448aaaf7b13b77a07285d07341", null ],
-    [ "writetospi", "class_decawave.html#a699654dc8dbc6366bedc2eb6ab13a34b", null ]
+    [ "writetospi", "class_decawave.html#a675e9ded20f5cb38b43937c652c3ae49", null ]
 ];

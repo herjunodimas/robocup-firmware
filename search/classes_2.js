@@ -8,6 +8,7 @@ var searchData=
   ['commmodule',['CommModule',['../class_comm_module.html',1,'']]],
   ['commport',['CommPort',['../class_comm_port.html',1,'']]],
   ['compositeshape',['CompositeShape',['../class_geometry2d_1_1_composite_shape.html',1,'Geometry2d']]],
+  ['confmessage',['ConfMessage',['../structrtp_1_1_conf_message.html',1,'rtp']]],
   ['console',['Console',['../class_console.html',1,'']]],
   ['controlmessage',['ControlMessage',['../structrtp_1_1_control_message.html',1,'rtp']]]
 ];

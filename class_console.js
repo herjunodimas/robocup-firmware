@@ -1,6 +1,6 @@
 var class_console =
 [
-    [ "~Console", "class_console.html#a32e8c79c8579b1b076e53848c540d4e7", null ],
+    [ "Console", "class_console.html#aba16cfd9f0894eb1312b1bc1155b6646", null ],
     [ "attachInputHandler", "class_console.html#abce075310014fc23761f41e6952845fc", null ],
     [ "Baudrate", "class_console.html#aa85001d0603c9a670fd2f04bbb050553", null ],
     [ "Baudrate", "class_console.html#a0f98d03fd3c6157b2ac945ad19acd059", null ],
@@ -10,7 +10,6 @@ var class_console =
     [ "CommandReady", "class_console.html#a83741a051626ffd1f5d68292c71b8709", null ],
     [ "detachInputHandler", "class_console.html#ad4473996959833d5133307a0aca2438a", null ],
     [ "Flush", "class_console.html#a8c948f8da92c34c8d02125783ce01020", null ],
-    [ "GetHostResponse", "class_console.html#a319615d03e5f958620b297918a2466fa", null ],
     [ "IsSystemStopRequested", "class_console.html#a9dff64f8179cd12a04a8352e436f062d", null ],
     [ "IterCmdBreakReq", "class_console.html#a5c52021f5304829c015139504bbde4d5", null ],
     [ "IterCmdBreakReq", "class_console.html#a6cb5a7aee3c499b5f948400851221c61", null ],

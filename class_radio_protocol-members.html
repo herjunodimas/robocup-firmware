@@ -115,25 +115,24 @@ $(document).ready(function(){initNavTree('class_radio_protocol.html','');});
 
 <p>This is the complete list of members for <a class="el" href="class_radio_protocol.html">RadioProtocol</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>CONNECTED</b> enum value (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>DISCONNECTED</b> enum value (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>RadioProtocol</b>(std::shared_ptr&lt; CommModule &gt; commModule, Decawave *radio, uint8_t uid=rtp::INVALID_ROBOT_UID) (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>confCallback</b> (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>debugCallback</b> (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>RadioProtocol</b>(std::shared_ptr&lt; CommModule &gt; commModule, uint8_t uid=rtp::INVALID_ROBOT_UID) (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_radio_protocol.html#a42423d86a2259acb1acc80a054739bb5">rxCallback</a></td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_radio_protocol.html#ab47de368e75e7994ea126b3d8a5ca633">rxHandler</a>(rtp::packet pkt)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_radio_protocol.html#a405dfec40dade46a1f0c634332c2ecfc">rxHandler</a>(rtp::Packet pkt)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_radio_protocol.html#a6c1d74f9c25b65c4c60f62fe881c06ec">setUID</a>(uint8_t uid)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>start</b>() (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>state</b>() const  (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>State</b> enum name (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>State</b> enum name (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>state</b>() const  (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>stop</b>() (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>STOPPED</b> enum value (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_radio_protocol.html#a2ba6d0c8849b508b9cde252c4d62f6c1">TIMEOUT_INTERVAL</a></td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~RadioProtocol</b>() (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_radio_protocol.html#a2ba6d0c8849b508b9cde252c4d62f6c1">TIMEOUT_INTERVAL</a></td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>~RadioProtocol</b>() (defined in <a class="el" href="class_radio_protocol.html">RadioProtocol</a>)</td><td class="entry"><a class="el" href="class_radio_protocol.html">RadioProtocol</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 19 2017 00:50:15 for GT RoboCup SSL by
+    <li class="footer">Generated on Wed Jan 24 2018 01:34:58 for GT RoboCup SSL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

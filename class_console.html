@@ -110,7 +110,6 @@ $(document).ready(function(){initNavTree('class_console.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_console-members.html">List of all members</a>  </div>
@@ -135,12 +134,9 @@ $(document).ready(function(){initNavTree('class_console.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a32e8c79c8579b1b076e53848c540d4e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32e8c79c8579b1b076e53848c540d4e7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#a32e8c79c8579b1b076e53848c540d4e7">~Console</a> ()</td></tr>
-<tr class="memdesc:a32e8c79c8579b1b076e53848c540d4e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstructor. <br /></td></tr>
-<tr class="separator:a32e8c79c8579b1b076e53848c540d4e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c948f8da92c34c8d02125783ce01020"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#a8c948f8da92c34c8d02125783ce01020">Flush</a> ()</td></tr>
-<tr class="memdesc:a8c948f8da92c34c8d02125783ce01020"><td class="mdescLeft">&#160;</td><td class="mdescRight">flushes stdout.  <a href="#a8c948f8da92c34c8d02125783ce01020">More...</a><br /></td></tr>
+<tr class="memitem:a8c948f8da92c34c8d02125783ce01020"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c948f8da92c34c8d02125783ce01020"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#a8c948f8da92c34c8d02125783ce01020">Flush</a> ()</td></tr>
+<tr class="memdesc:a8c948f8da92c34c8d02125783ce01020"><td class="mdescLeft">&#160;</td><td class="mdescRight">flushes stdout. Should be called after every putc or printf block. <br /></td></tr>
 <tr class="separator:a8c948f8da92c34c8d02125783ce01020"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f9c22fa2e525c4c0300d9f63cf216a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f9c22fa2e525c4c0300d9f63cf216a9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#a1f9c22fa2e525c4c0300d9f63cf216a9">RequestSystemStop</a> ()</td></tr>
@@ -194,16 +190,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ShowLogo</b> ()</td><
 <tr class="memitem:a5f0517604b8e43b833462f113fabde6e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f0517604b8e43b833462f113fabde6e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTitle</b> (const std::string &amp;)</td></tr>
 <tr class="separator:a5f0517604b8e43b833462f113fabde6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a319615d03e5f958620b297918a2466fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a319615d03e5f958620b297918a2466fa"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetHostResponse</b> ()</td></tr>
-<tr class="separator:a319615d03e5f958620b297918a2466fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a9b3169187cee9df27f0f8fee40a75e03"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b3169187cee9df27f0f8fee40a75e03"></a>
-static std::shared_ptr&lt; <a class="el" href="class_console.html">Console</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#a9b3169187cee9df27f0f8fee40a75e03">Instance</a> ()</td></tr>
-<tr class="memdesc:a9b3169187cee9df27f0f8fee40a75e03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the global Console instance. <br /></td></tr>
-<tr class="separator:a9b3169187cee9df27f0f8fee40a75e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -214,8 +200,13 @@ Serial&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:aa9ed59a4814138e95444e62d917e0511"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#aa9ed59a4814138e95444e62d917e0511">NEW_LINE_CHAR</a> = '\r'</td></tr>
-<tr class="memdesc:aa9ed59a4814138e95444e62d917e0511"><td class="mdescLeft">&#160;</td><td class="mdescRight">new line character.  <a href="#aa9ed59a4814138e95444e62d917e0511">More...</a><br /></td></tr>
+<tr class="memitem:a87075828b7972387cdf04c4a477e3ce0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87075828b7972387cdf04c4a477e3ce0"></a>
+static std::shared_ptr&lt; <a class="el" href="class_console.html">Console</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#a87075828b7972387cdf04c4a477e3ce0">Instance</a> = nullptr</td></tr>
+<tr class="memdesc:a87075828b7972387cdf04c4a477e3ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global singleton instance. <br /></td></tr>
+<tr class="separator:a87075828b7972387cdf04c4a477e3ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ed59a4814138e95444e62d917e0511"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9ed59a4814138e95444e62d917e0511"></a>
+static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#aa9ed59a4814138e95444e62d917e0511">NEW_LINE_CHAR</a> = '\r'</td></tr>
+<tr class="memdesc:aa9ed59a4814138e95444e62d917e0511"><td class="mdescLeft">&#160;</td><td class="mdescRight">New line character. Default ''. <br /></td></tr>
 <tr class="separator:aa9ed59a4814138e95444e62d917e0511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17e94dc8b72067d36e3db56cccf724d3"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#a17e94dc8b72067d36e3db56cccf724d3">BACKSPACE_FLAG_CHAR</a> = 0x7F</td></tr>
 <tr class="memdesc:a17e94dc8b72067d36e3db56cccf724d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">backspace flag char.  <a href="#a17e94dc8b72067d36e3db56cccf724d3">More...</a><br /></td></tr>
@@ -223,8 +214,9 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:ac16c7721fed16085a036317ac2f7e77e"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#ac16c7721fed16085a036317ac2f7e77e">BACKSPACE_REPLY_CHAR</a> = '\b'</td></tr>
 <tr class="memdesc:ac16c7721fed16085a036317ac2f7e77e"><td class="mdescLeft">&#160;</td><td class="mdescRight">backspace reply char.  <a href="#ac16c7721fed16085a036317ac2f7e77e">More...</a><br /></td></tr>
 <tr class="separator:ac16c7721fed16085a036317ac2f7e77e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a996a01817579715fc012468bc42af228"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#a996a01817579715fc012468bc42af228">BACKSPACE_REPLACE_CHAR</a> = ' '</td></tr>
-<tr class="memdesc:a996a01817579715fc012468bc42af228"><td class="mdescLeft">&#160;</td><td class="mdescRight">when the console backspaces, what does the last character become.  <a href="#a996a01817579715fc012468bc42af228">More...</a><br /></td></tr>
+<tr class="memitem:a996a01817579715fc012468bc42af228"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a996a01817579715fc012468bc42af228"></a>
+static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#a996a01817579715fc012468bc42af228">BACKSPACE_REPLACE_CHAR</a> = ' '</td></tr>
+<tr class="memdesc:a996a01817579715fc012468bc42af228"><td class="mdescLeft">&#160;</td><td class="mdescRight">character to replace when backspacing <br /></td></tr>
 <tr class="separator:a996a01817579715fc012468bc42af228"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a41cb91e38aa1b537867cec5c303672"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a41cb91e38aa1b537867cec5c303672"></a>
 static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#a3a41cb91e38aa1b537867cec5c303672">BREAK_CHAR</a> = 3</td></tr>
@@ -241,7 +233,8 @@ static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <tr class="memdesc:a88ac566a85fe725564744034b909a778"><td class="mdescLeft">&#160;</td><td class="mdescRight">define the sequence for arrow key flags <br /></td></tr>
 <tr class="separator:a88ac566a85fe725564744034b909a778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fc1bfb4f1ea91eca996ae9a9c0f2dc2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fc1bfb4f1ea91eca996ae9a9c0f2dc2"></a>
-static const char&#160;</td><td class="memItemRight" valign="bottom"><b>ESCAPE_SEQ_TWO</b> = '['</td></tr>
+static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#a9fc1bfb4f1ea91eca996ae9a9c0f2dc2">ESCAPE_SEQ_TWO</a> = '['</td></tr>
+<tr class="memdesc:a9fc1bfb4f1ea91eca996ae9a9c0f2dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">static const char ESCAPE_SEQ_ONE = '\033'; <br /></td></tr>
 <tr class="separator:a9fc1bfb4f1ea91eca996ae9a9c0f2dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7074be77806818e8e0099408c3e45b34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7074be77806818e8e0099408c3e45b34"></a>
 static const char&#160;</td><td class="memItemRight" valign="bottom"><b>ARROW_UP_KEY</b> = 'A'</td></tr>
@@ -262,6 +255,10 @@ static const char&#160;</td><td class="memItemRight" valign="bottom"><b>CMD_END_
 static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#a4cb18c172823884348832b52817fa9c2">COMMAND_BREAK_MSG</a> = &quot;*BREAK*\033[K&quot;</td></tr>
 <tr class="memdesc:a4cb18c172823884348832b52817fa9c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">break message <br /></td></tr>
 <tr class="separator:a4cb18c172823884348832b52817fa9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f5150241adfdce2a182c631f9b1a644"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f5150241adfdce2a182c631f9b1a644"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_console.html#a1f5150241adfdce2a182c631f9b1a644">instanceCount</a> = 0</td></tr>
+<tr class="memdesc:a1f5150241adfdce2a182c631f9b1a644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only call once! <br /></td></tr>
+<tr class="separator:a1f5150241adfdce2a182c631f9b1a644"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages serial-over-USB communication with the PC. </p>
@@ -280,24 +277,6 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a c
 </div><div class="memdoc">
 
 <p>Detach the Serial connection's RX handler to allow something else besides the Console to read from stdin. </p>
-
-</div>
-</div>
-<a class="anchor" id="a8c948f8da92c34c8d02125783ce01020"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Console::Flush </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>flushes stdout. </p>
-<p>Should be called after every putc or printf block. </p>
 
 </div>
 </div>
@@ -325,29 +304,6 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a c
 
 </div>
 </div>
-<a class="anchor" id="a996a01817579715fc012468bc42af228"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char Console::BACKSPACE_REPLACE_CHAR = ' '</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>when the console backspaces, what does the last character become. </p>
-<p>Default ' ' </p>
-
-</div>
-</div>
 <a class="anchor" id="ac16c7721fed16085a036317ac2f7e77e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -371,32 +327,9 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a c
 
 </div>
 </div>
-<a class="anchor" id="aa9ed59a4814138e95444e62d917e0511"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char Console::NEW_LINE_CHAR = '\r'</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>new line character. </p>
-<p>Default '' </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>firmware/common2015/modules/Console/<a class="el" href="_console_8hpp_source.html">Console.hpp</a></li>
-<li>firmware/common2015/modules/Console/Console.cpp</li>
+<li>lib/modules/include/<a class="el" href="_console_8hpp_source.html">Console.hpp</a></li>
+<li>lib/modules/Console.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -404,7 +337,7 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a c
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_console.html">Console</a></li>
-    <li class="footer">Generated on Wed Apr 19 2017 00:50:15 for GT RoboCup SSL by
+    <li class="footer">Generated on Wed Jan 24 2018 01:34:58 for GT RoboCup SSL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

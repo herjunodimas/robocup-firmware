@@ -1,4 +1,5 @@
 <map id="KickerBoard" name="KickerBoard">
-<area shape="rect" id="node2" href="$class_a_v_r910.html" title="AVR910 ISP. " alt="" coords="46,80,118,107"/>
-<area shape="rect" id="node3" href="$class_shared_s_p_i_device.html" title="SharedSPIDevice\&lt;\&gt;" alt="" coords="5,5,159,32"/>
+<area shape="rect" id="node2" href="$class_a_v_r910.html" title="AVR910 ISP. " alt="" coords="47,178,119,205"/>
+<area shape="rect" id="node3" href="$class_shared_s_p_i_device.html" title="SharedSPIDevice\&lt;\&gt;" alt="" coords="5,81,159,108"/>
+<area shape="rect" id="node5" href="$class_rtos_timer_helper.html" title="This class adds some nifty features to RtosTimer to make it more convenient to use. " alt="" coords="183,81,311,108"/>
 </map>
