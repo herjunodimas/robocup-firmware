@@ -5,13 +5,16 @@
 #include "FPGA.hpp"
 #include "RobotModel.hpp"
 #include <stdio.h>
+#include "MPU6050.h"
+#include "pins-control.hpp"
 
 /**
  * Robot controller that runs a PID loop on each of the four wheels.
  */
 class PidMotionController {
 public:
-    PidMotionController() {
+    PidMotionController()
+    {
         setPidValues(3.0, 0, 0, 50, 0);
 
         x_vel.kp = vel_p;
@@ -72,7 +75,8 @@ public:
      * @return Duty cycle values for each of the 4 motors
      */
     std::array<int16_t, 4> run(const std::array<int16_t, 4>& encoderDeltas,
-                               float dt, Eigen::Vector4d* errors = nullptr,
+                               float gyroZ, float dt,
+                               Eigen::Vector4d* errors = nullptr,
                                Eigen::Vector4d* wheelVelsOut = nullptr,
                                Eigen::Vector4d* targetWheelVelsOut = nullptr) {
         // convert encoder ticks to rad/s
@@ -94,6 +98,9 @@ public:
         targetBodyVel[0] = x;
         targetBodyVel[1] = y;
         targetBodyVel[2] = w;
+
+        printf("%f\r\n", gyroZ);
+        _targetVel[2] = gyroZ;
 
         Eigen::Vector4d targetWheelVels =
             RobotModelControl.BotToWheel * targetBodyVel;
