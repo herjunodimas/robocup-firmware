@@ -15,7 +15,7 @@
 #include "TaskSignals.hpp"
 #include "io-expander.hpp"
 #include "motors.hpp"
-//#include "mpu-6050.hpp"
+#include "MPU6050.h"
 #include "stall/stall.hpp"
 using namespace std;
 
@@ -65,34 +65,35 @@ void Task_Controller(const void* args) {
     const auto threadPriority = osThreadGetPriority(threadID);
     (void)threadPriority;  // disable warning if unused
 
-#if 0 /* enable whenever the imu is actually used */
-    MPU6050 imu(RJ_I2C_SDA, RJ_I2C_SCL);
+    // Initialize MPU
+    int ax_offset = 0, ay_offset = 0, az_offset = 0,
+        gx_offset = 0, gy_offset = 0, gz_offset = 0;
 
-    imu.setBW(MPU6050_BW_256);
-    imu.setGyroRange(MPU6050_GYRO_RANGE_250);
-    imu.setAcceleroRange(MPU6050_ACCELERO_RANGE_2G);
-    imu.setSleepMode(false);
-
-    char testResp;
-    if ((testResp = imu.testConnection())) {
-        float resultRatio[6];
-        imu.selfTest(resultRatio);
-        LOG(INFO,
-            "IMU self test results:\r\n"
-            "    Accel (X,Y,Z):\t(%2.2f%%, %2.2f%%, %2.2f%%)\r\n"
-            "    Gyro  (X,Y,Z):\t(%2.2f%%, %2.2f%%, %2.2f%%)",
-            resultRatio[0], resultRatio[1], resultRatio[2], resultRatio[3],
-            resultRatio[4], resultRatio[5]);
-
-        LOG(OK, "Control loop ready!\r\n    Thread ID: %u, Priority: %d",
-            ((P_TCB)threadID)->task_id, threadPriority);
-    } else {
-        LOG(SEVERE,
-            "MPU6050 not found!\t(response: 0x%02X)\r\n    Falling back to "
-            "sensorless control loop.",
-            testResp);
+    int16_t ax = 0, ay = 0, az = 0,
+            gx = 0, gy = 0, gz = 0;
+    MPU6050 imu(MPU6050_DEFAULT_ADDRESS, RJ_I2C_SDA, RJ_I2C_SCL);
+    FILE *fp = fopen("/local/offsets.txt", "r");  // Open "out.txt" on the local file system for writing
+    
+    if (fp != nullptr) {
+        int success = fscanf(fp, "%d %d %d %d %d %d", &ax_offset, &ay_offset, &az_offset,
+                                                      &gx_offset, &gy_offset, &gz_offset);
+        if (success == 6) {
+            printf("Successfully loaded MPU offsets from file\n");
+        } else {
+            printf("Failed to load MPU offsets from file\n");
+        }
+        fclose(fp);
     }
-#endif
+
+    imu.setFullScaleGyroRange(MPU6050_GYRO_FS_1000);
+    imu.setFullScaleAccelRange(MPU6050_ACCEL_FS_8);
+
+    imu.setXAccelOffset(ax_offset);
+    imu.setYAccelOffset(ay_offset);
+    imu.setZAccelOffset(az_offset);
+    imu.setXGyroOffset(gx_offset);
+    imu.setYGyroOffset(gy_offset);
+    imu.setZGyroOffset(gz_offset);
 
     // signal back to main and wait until we're signaled to continue
     osSignalSet(mainID, MAIN_TASK_CONTINUE);
@@ -107,10 +108,7 @@ void Task_Controller(const void* args) {
         [&]() { commandTimedOut = true; }, osTimerPeriodic);
 
     while (true) {
-#if 0 /* enable whenever the imu is actually used */
-        imu.getGyro(gyroVals);
-        imu.getAccelero(accelVals);
-#endif
+        imu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
 
         if (DebugCommunication::configStoreIsValid
                 [DebugCommunication::ConfigCommunication::PID_P]) {
@@ -179,7 +177,7 @@ void Task_Controller(const void* args) {
         // run PID controller to determine what duty cycles to use to drive the
         // motors.
         std::array<int16_t, 4> driveMotorDutyCycles = pidController.run(
-            driveMotorEnc, dt, &errors, &wheelVelsOut, &targetWheelVelsOut);
+            driveMotorEnc, 1000.0f * gz / (1 << 16), dt, &errors, &wheelVelsOut, &targetWheelVelsOut);
 
         DebugCommunication::debugStore
             [DebugCommunication::DebugResponse::PIDError0] =
