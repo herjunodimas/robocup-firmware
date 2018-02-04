@@ -54,6 +54,7 @@ var annotated_dup =
     [ "FlashingTimeoutLED", "class_flashing_timeout_l_e_d.html", "class_flashing_timeout_l_e_d" ],
     [ "FPGA", "class_f_p_g_a.html", "class_f_p_g_a" ],
     [ "HackedKickerBoard", "class_hacked_kicker_board.html", "class_hacked_kicker_board" ],
+    [ "I2Cdev", "class_i2_cdev.html", "class_i2_cdev" ],
     [ "IOExpanderDigitalInOut", "class_i_o_expander_digital_in_out.html", "class_i_o_expander_digital_in_out" ],
     [ "KickerBoard", "class_kicker_board.html", "class_kicker_board" ],
     [ "LogHelper", "class_log_helper.html", "class_log_helper" ],
@@ -67,6 +68,7 @@ var annotated_dup =
     [ "Pid", "class_pid.html", "class_pid" ],
     [ "PidMotionController", "class_pid_motion_controller.html", "class_pid_motion_controller" ],
     [ "PidTuner", "class_pid_tuner.html", "class_pid_tuner" ],
+    [ "Quaternion", "class_quaternion.html", "class_quaternion" ],
     [ "RadioProtocol", "class_radio_protocol.html", "class_radio_protocol" ],
     [ "registerSetting_t", "structregister_setting__t.html", "structregister_setting__t" ],
     [ "RobotModel", "class_robot_model.html", "class_robot_model" ],
@@ -79,5 +81,7 @@ var annotated_dup =
     [ "StallDetection", "class_stall_detection.html", "class_stall_detection" ],
     [ "StrobingTimeoutLEDs", "class_strobing_timeout_l_e_ds.html", "class_strobing_timeout_l_e_ds" ],
     [ "TimeoutLED", "class_timeout_l_e_d.html", "class_timeout_l_e_d" ],
+    [ "VectorFloat", "class_vector_float.html", "class_vector_float" ],
+    [ "VectorInt16", "class_vector_int16.html", "class_vector_int16" ],
     [ "Watchdog", "class_watchdog.html", null ]
 ];

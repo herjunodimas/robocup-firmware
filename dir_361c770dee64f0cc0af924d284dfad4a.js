@@ -1,5 +1,6 @@
 var dir_361c770dee64f0cc0af924d284dfad4a =
 [
-    [ "mpu-6050-defines.hpp", "mpu-6050-defines_8hpp_source.html", null ],
-    [ "mpu-6050.hpp", "mpu-6050_8hpp_source.html", null ]
+    [ "helper_3dmath.h", "helper__3dmath_8h_source.html", null ],
+    [ "I2Cdev.h", "_i2_cdev_8h_source.html", null ],
+    [ "MPU6050.h", "_m_p_u6050_8h_source.html", null ]
 ];

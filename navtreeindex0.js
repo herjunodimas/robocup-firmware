@@ -33,9 +33,11 @@ var NAVTREEINDEX0 =
 "_i2_c_driver_8hpp_source.html":[3,0,0,1,11,0],
 "_i2_c_master_rtos_8hpp_source.html":[3,0,0,1,11,1],
 "_i2_c_slave_rtos_8hpp_source.html":[3,0,0,1,11,3],
+"_i2_cdev_8h_source.html":[3,0,0,1,9,1],
 "_kicker_board_8hpp_source.html":[3,0,0,1,7,2],
 "_line_8hpp_source.html":[3,0,0,0,1,3],
 "_logger_8hpp_source.html":[3,0,0,4,0,3],
+"_m_p_u6050_8h_source.html":[3,0,0,1,9,2],
 "_macro_helpers_8hpp_source.html":[3,0,0,4,0,4],
 "_mail_helpers_8hpp_source.html":[3,0,0,4,0,5],
 "_mbed_8hpp_source.html":[3,0,0,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "class_geometry2d_1_1_arc.html#a67e9150e61760506a4c50bfc4c1a2ffe":[2,0,0,0,10],
 "class_geometry2d_1_1_arc.html#a7bd0724359f45af17b4e1e015ab466e1":[2,0,0,0,1],
 "class_geometry2d_1_1_arc.html#a9abec8623b01b160476ed82d7da35bc2":[2,0,0,0,12],
-"class_geometry2d_1_1_arc.html#aae2c863561c2fdbef37318f64350e92a":[2,0,0,0,4],
-"class_geometry2d_1_1_arc.html#ac1d8021f23be6757fcc348b69f7dc69f":[2,0,0,0,3],
-"class_geometry2d_1_1_arc.html#acb4e55e47f8c0a75f5a4264430bee18e":[2,0,0,0,11]
+"class_geometry2d_1_1_arc.html#aae2c863561c2fdbef37318f64350e92a":[2,0,0,0,4]
 };

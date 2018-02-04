@@ -30,6 +30,7 @@ var hierarchy =
     [ "FIRFilter< T >", "class_f_i_r_filter.html", null ],
     [ "HackedKickerBoard", "class_hacked_kicker_board.html", null ],
     [ "rtp::Header", "structrtp_1_1_header.html", null ],
+    [ "I2Cdev", "class_i2_cdev.html", null ],
     [ "mbed::I2CDriver", "classmbed_1_1_i2_c_driver.html", null ],
     [ "mbed::I2CMasterRtos", "classmbed_1_1_i2_c_master_rtos.html", null ],
     [ "mbed::I2CSlaveRtos", "classmbed_1_1_i2_c_slave_rtos.html", null ],
@@ -69,13 +70,14 @@ var hierarchy =
     [ "PidMotionController", "class_pid_motion_controller.html", null ],
     [ "PidTuner", "class_pid_tuner.html", null ],
     [ "Geometry2d::Point", "class_geometry2d_1_1_point.html", null ],
+    [ "Quaternion", "class_quaternion.html", null ],
     [ "RadioProtocol", "class_radio_protocol.html", null ],
     [ "registerSetting_t", "structregister_setting__t.html", null ],
     [ "RobotModel", "class_robot_model.html", null ],
     [ "rtp::RobotStatusMessage", "structrtp_1_1_robot_status_message.html", null ],
     [ "rtp::RobotTxMessage", "structrtp_1_1_robot_tx_message.html", null ],
-    [ "RobotTxMessages", "union_robot_tx_messages.html", null ],
     [ "rtp::RobotTxMessage::RobotTxMessages", "unionrtp_1_1_robot_tx_message_1_1_robot_tx_messages.html", null ],
+    [ "RobotTxMessages", "union_robot_tx_messages.html", null ],
     [ "RotarySelector< DIGITAL_IN, NUM_PINS >", "class_rotary_selector.html", null ],
     [ "RtosTimer", null, [
       [ "RtosTimerHelper", "class_rtos_timer_helper.html", null ]
@@ -111,5 +113,7 @@ var hierarchy =
       [ "StrobingTimeoutLEDs< NUM_LEDS >", "class_strobing_timeout_l_e_ds.html", null ]
     ] ],
     [ "Geometry2d::TransformMatrix", "class_geometry2d_1_1_transform_matrix.html", null ],
+    [ "VectorFloat", "class_vector_float.html", null ],
+    [ "VectorInt16", "class_vector_int16.html", null ],
     [ "Watchdog", "class_watchdog.html", null ]
 ];
