@@ -11,19 +11,6 @@
  */
 class PidMotionController {
 public:
-    bool logging = true;
-    // num_samples * dt_per_sample * 0.005 -> 12 seconds of recording?
-    const static int num_samples = 1000;
-    const static int dt_per_sample = 3;
-    int cur_sample = 0;
-
-    // For logging
-    // std::tuple<float, float> points[num_samples];
-    // float points[num_samples];
-    // std::vector< std::tuple<float, float> > points;
-    // float points[num_samples];
-    float duties[4] = {0, 0, 0, 0};
-
     PidMotionController() {
         setPidValues(3.0, 0, 0, 50, 0);
 
@@ -42,48 +29,6 @@ public:
         w_vel.kd = vel_d;
         w_vel.setWindup(vel_wind);
         w_vel.derivAlpha = 0;
-        // if (logging) {
-        //    points.reserve(num_samples);
-        //}
-    }
-
-    void log(float dt, const Eigen::Vector4f& wheelVelErr) {
-        if (!logging) return;
-        // printf("Hit log\r\n");
-
-        int effective_index = cur_sample / dt_per_sample;
-        if (effective_index < num_samples) {
-            // points[effective_index] = std::make_tuple(dt, wheelVelErr[0]);
-            // //std::make_tuple(dt, wheelVelErr);
-            // points[effective_index] = wheelVelErr[1];
-            cur_sample++;
-        } else {
-            save_log();
-        }
-    }
-
-    void save_log() {
-        printf("Saving motor error log to disk.\r\n");
-        // FILE *fp = fopen("/local/VEL", "w");
-        // fprintf(fp, "time,m1_err,m2_err,m3_err,m4_errble\n");
-        // for (auto& p : points) {
-        // float time_sum = 0;
-        for (int i = 0; i < num_samples; ++i) {
-            // float dt; Eigen::Vector4f velErrs;
-            // float dt, vel;
-            // std::tie(dt, vel) = points[i];
-            // time_sum += dt;
-            // fprintf(fp, "%f,%f,%f,%f,%f\n", dt, velErrs[0], velErrs[1],
-            // velErrs[2], velErrs[3]);
-            // fprintf(fp, "%f,%f\n", time_sum, vel);
-            // fprintf(fp, "%f\n", points[i]);
-            // printf("%f\r\n", points[i]);
-        }
-        // fprintf(fp, "%d\n", points.size());
-        // fflush(fp);
-        // fclose(fp);
-
-        logging = false;
     }
 
     void setPidValues(float p, float i, float d, unsigned int windup,
@@ -207,8 +152,7 @@ public:
                 _controllers[i].set_saturated(false);
             }
 
-            duties[i] = dc;
-            dutyCycles[i] = (int16_t)dc;
+            dutyCycles[i] = static_cast<int16_t>(dc);
         }
 
         return dutyCycles;
