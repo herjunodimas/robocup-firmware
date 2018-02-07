@@ -154,7 +154,7 @@ public:
             RobotModelControl.BotToWheel * targetBodyVel;
 
         for (int i = 0; i < 4; i++) {
-            if (abs(targetWheelVels[i]) < 0.01) {
+            if (abs(targetWheelVels[i]) < 1) {
                 targetWheelVels[i] = 0;
             }
         }
