@@ -99,9 +99,6 @@ public:
         targetBodyVel[1] = y;
         targetBodyVel[2] = w;
 
-        printf("%f\r\n", gyroZ);
-        _targetVel[2] = gyroZ;
-
         Eigen::Vector4d targetWheelVels =
             RobotModelControl.BotToWheel * targetBodyVel;
 
