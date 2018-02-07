@@ -123,7 +123,7 @@ public:
             *wheelVelsOut = wheelVels;
         }
 
-        // std::printf("%f\r\n", wheelVelErr[0]);
+		//std::printf("%d\t%d\r\n", static_cast<int>(currentVel[2] * 100), static_cast<int>(gyroZ * 100));
         // Calculated by checking for slippage at max accel, and decreasing appropriately
         // Binary search works really well in this case
         // Caution: This is dependent on the PID values so increasing the agressiveness of that will change this
