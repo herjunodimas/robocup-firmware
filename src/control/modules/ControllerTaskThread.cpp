@@ -71,9 +71,12 @@ void Task_Controller(const void* args) {
 
     int16_t ax = 0, ay = 0, az = 0,
             gx = 0, gy = 0, gz = 0;
-    MPU6050 imu(MPU6050_DEFAULT_ADDRESS, RJ_I2C_SDA, RJ_I2C_SCL);
+
+	MPU6050 imu(MPU6050_DEFAULT_ADDRESS, RJ_I2C_SDA, RJ_I2C_SCL);
+
+	/*
     FILE *fp = fopen("/local/offsets.txt", "r");  // Open "out.txt" on the local file system for writing
-    
+
     if (fp != nullptr) {
         int success = fscanf(fp, "%d %d %d %d %d %d", &ax_offset, &ay_offset, &az_offset,
                                                       &gx_offset, &gy_offset, &gz_offset);
@@ -94,6 +97,7 @@ void Task_Controller(const void* args) {
     imu.setXGyroOffset(gx_offset);
     imu.setYGyroOffset(gy_offset);
     imu.setZGyroOffset(gz_offset);
+	*/
 
     // signal back to main and wait until we're signaled to continue
     osSignalSet(mainID, MAIN_TASK_CONTINUE);
@@ -108,7 +112,7 @@ void Task_Controller(const void* args) {
         [&]() { commandTimedOut = true; }, osTimerPeriodic);
 
     while (true) {
-        imu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+        //imu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
 
         if (DebugCommunication::configStoreIsValid
                 [DebugCommunication::ConfigCommunication::PID_P]) {
