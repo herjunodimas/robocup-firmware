@@ -1,7 +1,7 @@
 //ported from arduino library: https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050
 //written by szymon gaertig (email: szymon@gaertig.com.pl)
 //
-//Changelog: 
+//Changelog:
 //2013-01-08 - first beta release
 
 #ifndef I2Cdev_h
@@ -12,12 +12,11 @@
 
 class I2Cdev {
     private:
-        Serial debugSerial;
         I2CMasterRtos i2c;
     public:
         I2Cdev();
-        I2Cdev(PinName i2cSda, PinName i2cScl);        
-        
+        I2Cdev(PinName i2cSda, PinName i2cScl);
+
         int8_t readBit(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint8_t *data, uint16_t timeout=I2Cdev::readTimeout());
         int8_t readBitW(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint16_t *data, uint16_t timeout=I2Cdev::readTimeout());
         int8_t readBits(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint8_t *data, uint16_t timeout=I2Cdev::readTimeout());

@@ -7,12 +7,12 @@
 
 #define useDebugSerial
 
-I2Cdev::I2Cdev(): debugSerial(USBTX, USBRX), i2c(I2C_SDA,I2C_SCL)
+I2Cdev::I2Cdev(): i2c(I2C_SDA,I2C_SCL)
 {
 
 }
 
-I2Cdev::I2Cdev(PinName i2cSda, PinName i2cScl): debugSerial(USBTX, USBRX), i2c(i2cSda,i2cScl)
+I2Cdev::I2Cdev(PinName i2cSda, PinName i2cScl): i2c(i2cSda,i2cScl)
 {
 
 }
@@ -283,11 +283,11 @@ bool I2Cdev::writeWords(uint8_t devAddr, uint8_t regAddr, uint8_t length, uint16
     // // uint8_t bytes[bytes_num];
     // unsigned int i = 1;
     // char *c = (char*)&i;
-    // if (*c)    
+    // if (*c)
         // printf("Little endian");
     // else
         // printf("Big endian");
-    
+
     // for (int i = 0; i < length; ++i) {
         // i2c.write(static_cast<uint8_t>(data[i] && 0xFF));
         // i2c.write(static_cast<uint8_t>((data[i] >> 8) && 0xFF));
@@ -304,7 +304,7 @@ bool I2Cdev::writeWords(uint8_t devAddr, uint8_t regAddr, uint8_t length, uint16
     // // i2c.write(devAddr, data, length);
 
     // i2c.stop();
-    
+
     // //writeBytes(devAddr, regAddr, length*2, bytes);
 
     return true;

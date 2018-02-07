@@ -52,7 +52,7 @@ typedef const unsigned char prog_uchar;
 /** Default constructor, uses default I2C address.
  * @see MPU6050_DEFAULT_ADDRESS
  */
-MPU6050::MPU6050() : debugSerial(USBTX, USBRX)
+MPU6050::MPU6050()
 {
     this->i2Cdev = new I2Cdev(I2C_SDA, I2C_SCL);
     devAddr = MPU6050_DEFAULT_ADDRESS;
@@ -66,7 +66,7 @@ MPU6050::MPU6050() : debugSerial(USBTX, USBRX)
  * @param i2c sda
  * @param i2c scl
  */
-MPU6050::MPU6050(uint8_t address, PinName sda, PinName scl) : debugSerial(USBTX, USBRX)
+MPU6050::MPU6050(uint8_t address, PinName sda, PinName scl)
 {
     this->i2Cdev = new I2Cdev(sda, scl);
     devAddr = address;
@@ -1054,7 +1054,7 @@ bool MPU6050::getSlaveEnabled(uint8_t num)
 }
 /** Set the enabled value for the specified slave (0-3).
  * @param num Slave number (0-3)
- * @param enabled New enabled value for specified slave 
+ * @param enabled New enabled value for specified slave
  * @see getSlaveEnabled()
  * @see MPU6050_RA_I2C_SLV0_CTRL
  */
