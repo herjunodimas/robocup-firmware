@@ -72,7 +72,8 @@ void Task_Controller(const void* args) {
     int16_t ax = 0, ay = 0, az = 0,
             gx = 0, gy = 0, gz = 0;
 
-	MPU6050 imu(MPU6050_DEFAULT_ADDRESS, RJ_I2C_SDA, RJ_I2C_SCL);
+    MPU6050 imu(MPU6050_DEFAULT_ADDRESS, RJ_I2C_SDA, RJ_I2C_SCL);
+    imu.initialize();
 
     FILE *fp = fopen("/local/offsets.txt", "r");  // Open "out.txt" on the local file system for writing
 
@@ -179,7 +180,7 @@ void Task_Controller(const void* args) {
         // run PID controller to determine what duty cycles to use to drive the
         // motors.
         std::array<int16_t, 4> driveMotorDutyCycles = pidController.run(
-            driveMotorEnc, 1000.0f * gz / (1 << 16), dt, &errors, &wheelVelsOut, &targetWheelVelsOut);
+            driveMotorEnc, gz / 32.8f, dt, &errors, &wheelVelsOut, &targetWheelVelsOut);
 
         DebugCommunication::debugStore
             [DebugCommunication::DebugResponse::PIDError0] =
