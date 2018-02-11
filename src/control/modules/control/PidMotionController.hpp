@@ -75,7 +75,7 @@ public:
      * @return Duty cycle values for each of the 4 motors
      */
     std::array<int16_t, 4> run(const std::array<int16_t, 4>& encoderDeltas,
-                               float gyroZ, float dt,
+                               float gyro_w_deg_s, float dt,
                                Eigen::Vector4d* errors = nullptr,
                                Eigen::Vector4d* wheelVelsOut = nullptr,
                                Eigen::Vector4d* targetWheelVelsOut = nullptr) {
@@ -123,7 +123,15 @@ public:
             *wheelVelsOut = wheelVels;
         }
 
-		//std::printf("%d\t%d\r\n", static_cast<int>(currentVel[2] * 100), static_cast<int>(gyroZ * 100));
+        // units: degs/second
+        float encoder_w_deg_s = currentVel[2] * 180.0f / M_PI;
+        bool close = abs(encoder_w_deg_s - gyro_w_deg_s) < 10;
+
+
+        std::printf("%d\t%d\r\n",
+                static_cast<int>(encoder_w_deg_s),
+                static_cast<int>(gyro_w_deg_s));
+
         // Calculated by checking for slippage at max accel, and decreasing appropriately
         // Binary search works really well in this case
         // Caution: This is dependent on the PID values so increasing the agressiveness of that will change this
