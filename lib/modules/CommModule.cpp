@@ -138,7 +138,7 @@ void CommModule::rxThread() {
             if (portIter != m_ports.end()) {
                 if (portIter->second.hasRxCallback()) {
                     rxCount++;
-                    if (rxCount % 2000 == 0) std::printf("%u\r\n", rxCount);
+                    // if (rxCount % 2000 == 0) std::printf("%u\r\n", rxCount);
 
                     portIter->second.getRxCallback()(*p);
 
