@@ -75,6 +75,9 @@ void Task_Simulate_RX_Packet(const void* args) {
 void Task_Controller(const void* args);
 void Task_Controller_UpdateTarget(Eigen::Vector3f targetVel);
 void Task_Controller_UpdateDribbler(uint8_t dribbler);
+void Task_Controller_GetDebugVars(
+        int16_t* wheel_enc_deltas, int16_t* wheel_duty_cycles,
+        int16_t* enc_deltas_time, int16_t* gyro_w);
 void InitializeCommModule(SharedSPIDevice<>::SpiPtrT sharedSPI);
 
 extern std::array<WheelStallDetection, 4> wheelStallDetection;
@@ -316,6 +319,11 @@ int main() {
         }
     };
 
+    int16_t wheel_enc_deltas[4];
+    int16_t wheel_duty_cycles[4];
+    int16_t enc_deltas_time;
+    int16_t gyro_w;
+
     radioProtocol.rxCallback =
         [&](const rtp::ControlMessage* msg, const bool addressed) {
             // reset timeout
@@ -385,6 +393,12 @@ int main() {
             // kicker status
             reply.kickStatus = KickerBoard::Instance->getVoltage() > 230;
             reply.kickHealthy = KickerBoard::Instance->isHealthy();
+
+            // Task controller
+            Task_Controller_GetDebugVars(reply.wheel_enc_deltas, reply.wheel_duty_cycles,
+                                         &reply.enc_deltas_time, &reply.gyro_w);
+
+
 
             //            for (int i=0;
             //            i<rtp::RobotStatusMessage::debug_data_length; i++) {

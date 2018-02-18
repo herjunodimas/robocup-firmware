@@ -50,6 +50,24 @@ void Task_Controller_UpdateDribbler(uint8_t dribbler) {
     dribblerSpeed = dribbler;
 }
 
+int16_t g_wheel_enc_deltas[4];
+int16_t g_wheel_duty_cycles[4];
+int16_t g_enc_deltas_time;
+int16_t g_gyro_w;
+
+void Task_Controller_GetDebugVars(
+        int16_t* wheel_enc_deltas, int16_t* wheel_duty_cycles,
+        int16_t* enc_deltas_time, int16_t* gyro_w)
+{
+    for (int i = 0; i < 4; ++i) {
+        wheel_enc_deltas[i] = g_wheel_enc_deltas[i];
+        wheel_duty_cycles[i] = g_wheel_duty_cycles[i];
+    }
+
+    *enc_deltas_time = g_enc_deltas_time;
+    *gyro_w = g_gyro_w;
+}
+
 /**
  * initializes the motion controller thread
  */
@@ -71,6 +89,7 @@ void Task_Controller(const void* args) {
 
     int16_t ax = 0, ay = 0, az = 0,
             gx = 0, gy = 0, gz = 0;
+
 
     MPU6050 imu(MPU6050_DEFAULT_ADDRESS, RJ_I2C_SDA, RJ_I2C_SCL);
     imu.initialize();
@@ -169,6 +188,10 @@ void Task_Controller(const void* args) {
          *
          */
         const float dt = enc_deltas.back() * (1 / 18.432e6) * 2 * 128;
+
+        for (auto i = 0; i < 4; i++) g_wheel_enc_deltas[i] = enc_deltas[i];
+        g_enc_deltas_time = enc_deltas.back();
+        g_gyro_w = gz;
 
         // take first 4 encoder deltas
         std::array<int16_t, 4> driveMotorEnc;
@@ -303,6 +326,8 @@ void Task_Controller(const void* args) {
                 dc = copysign(FPGA::MAX_DUTY_CYCLE, dc);
             }
         }
+
+        for (auto i = 0; i < 4; i++) g_wheel_duty_cycles[i] = duty_cycles[i];
 
         // dribbler duty cycle
         duty_cycles[4] = dribblerSpeed;
