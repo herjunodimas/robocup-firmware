@@ -128,12 +128,12 @@ public:
         float encoder_w_deg_s = currentVel[2] * 180.0f / M_PI;
         bool close = abs(encoder_w_deg_s - gyro_w_deg_s) < 10;
 
-        if (count++ > 20) {
-            count = 0;
-            std::printf("%d\t%d\r\n",
-                   static_cast<int>(encoder_w_deg_s),
-                   static_cast<int>(gyro_w_deg_s));
-        }
+        // if (count++ > 20) {
+            // count = 0;
+            // std::printf("%d\t%d\r\n",
+                   // static_cast<int>(encoder_w_deg_s),
+                   // static_cast<int>(gyro_w_deg_s));
+        // }
 
         // Calculated by checking for slippage at max accel, and decreasing appropriately
         // Binary search works really well in this case
