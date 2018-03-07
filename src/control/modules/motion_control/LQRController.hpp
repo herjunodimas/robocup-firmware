@@ -1,40 +1,56 @@
-#include "OfflineLqrController.hpp"
-#include "logger.hpp"
-#include <LinearAlgebra.hpp>
+#include <Eigen/Dense>
+#include "Geometry2d/Util.hpp"
+#include "RobotModel.hpp"
 
-template<typename T>
-T clamp(T value, T min, T max) {
-    if (value > max) return max;
-    else if (value < min) return min;
-    else return value;
-}
+// This is an "offline" LQR controller because the calculations for finding
+// the gain matrix, K, are done offline (at compile time) and stored in a
+// lookup table.  Calculating K on the MBED would be very slow...
+class LQRController {
+   public:
+    void setTargetVel(Eigen::Vector3f target) { _targetVel = target; }
+    /// Weighting matrices for the LQR cost function.
+    //
+    // LQR gain matrix.
+    // typedef Eigen::Matrix<float, 4, 3> KType;
 
-OfflineLqrController::OfflineLqrController(
-    const RobotModel &robotModel, const RobotModelParams &robotModelParams,
-    const LqrLookupTable<KType> &lookupTable)
-    : _robotModel(robotModel),
-      _robotModelParams(robotModelParams),
-      _lookupTable(lookupTable) {
-    // Cache the value of pinv(B) to be used later
-    _pinvB = PseudoInverse(_robotModel.B);
-}
 
-Eigen::Vector4f OfflineLqrController::computeControls(
-    const Eigen::Vector3f &currVel, const Eigen::Vector3f &cmdVel) const {
-    float dPhiDt = currVel[2];
-    KType K;
-    _lookupTable.lookup(dPhiDt, &K);
-    RobotModel::AType A = _robotModel.A1 + _robotModel.A2 * dPhiDt;
+    /// u = -K*(currVel-cmdVel) - pinv(B)*A*cmdVel
+    std::array<int16_t, 4> run(const std::array<int16_t, 4>& encoderDeltas, float dt)
+    {
 
-    auto steadyStateTerm = -(_pinvB * A * cmdVel);
-    auto correctionTerm = -K * (currVel - cmdVel);
-    Eigen::Vector4f controlValues =  correctionTerm + steadyStateTerm;
+        // get wheel velocities from encoder readings
+        // we should probably build a proper estimator rather than taking the
+        // lastest measurement as truth, but this will do for now
+        Eigen::Matrix<double, 4, 1> wheelVels;
+        wheelVels << encoderDeltas[0], encoderDeltas[1], encoderDeltas[2],
+            encoderDeltas[3];
+        wheelVels *= 2.0 * M_PI / ENC_TICKS_PER_TURN / dt;
 
-    // limit output voltages to V_max
-    for (int i = 0; i < 4; ++i) {
-        controlValues[i] = clamp(controlValues[i], -_robotModelParams.V_max,
-                                 _robotModelParams.V_max);
+        Eigen::Matrix<double, 3, 1> target_mat;
+        target_mat << _targetVel[0], _targetVel[1], _targetVel[2];
+        Eigen::Matrix<double, 4, 1> targetWheelVels =
+            RobotModelControl.BotToWheel * target_mat;
+
+        auto steadyStateTerm = -(RobotModelControl.PinvB * RobotModelControl.A * targetWheelVels);
+        auto correctionTerm = -RobotModelControl.K * (wheelVels - targetWheelVels);
+        Eigen::Matrix<double, 4, 1> controlValues =  correctionTerm + steadyStateTerm;
+
+        control_v += controlValues;
+
+        std::array<int16_t, 4> control_duties;
+        // limit output voltages to V_max
+        for (std::size_t i = 0; i < control_duties.size(); ++i) {
+            control_duties[i] = control_v[i] / RobotModelControl.V_Max;
+        }
+        // printf("Duties: %d %d %d %d\r\n", control_duties[0], control_duties[1], control_duties[2], control_duties[3]);
+
+        return control_duties;
     }
 
-    return controlValues;
-}
+   private:
+    Eigen::Vector3f _targetVel{};
+
+    Eigen::Matrix<double, 4, 1> control_v = {0, 0, 0, 0};
+
+    static const uint16_t ENC_TICKS_PER_TURN = 2048 * 3;
+};

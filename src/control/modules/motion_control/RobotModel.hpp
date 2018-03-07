@@ -1,6 +1,6 @@
 #pragma once
 
-#define EIGEN_HAS_CXX11_MATH 0
+//#define EIGEN_HAS_CXX11_MATH 0
 #include <Eigen/Dense>
 #include <array>
 #include "Geometry2d/Util.hpp"
@@ -9,11 +9,19 @@
 /// Model parameters for a robot.  Used by the controls system.
 class RobotModel {
 public:
+
+    double V_Max = 18.5;
+
     /// Radius of omni-wheel (in meters)
     double WheelRadius;
 
     /// Distance from center of robot to center of wheel
     double WheelDist;
+
+    Eigen::Matrix<double, 4, 4> A;
+    Eigen::Matrix<double, 4, 4> B;
+    Eigen::Matrix<double, 4, 4> PinvB;
+    Eigen::Matrix<double, 4, 4> K;
 
     /// Wheel angles (in radians) measured between +x axis and wheel axle
     std::array<double, 4> WheelAngles;
