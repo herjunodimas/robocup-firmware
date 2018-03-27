@@ -35,7 +35,13 @@ class LQRController {
         // auto correctionTerm = -RobotModelControl.K * (wheelVels - targetWheelVels);
         // Eigen::Matrix<double, 4, 1> controlValues =  correctionTerm + steadyStateTerm;
 
-        auto control_v = -RobotModelControl.K * (wheelVels - targetWheelVels);
+        auto error = wheelVels - targetWheelVels;
+        _wheelVelErrors += error * dt;
+
+        Eigen::VectorXd combined_state;
+        combined_state << wheelVels, _wheelVelErrors;
+
+        auto control_v = -RobotModelControl.K * combined_state;
 
         // control_v += controlValues;
 
@@ -51,6 +57,7 @@ class LQRController {
 
    private:
     Eigen::Vector3f _targetVel{};
+    Eigen::Vector4d _wheelVelErrors = {0, 0, 0, 0};
 
     // Eigen::Matrix<double, 4, 1> control_v = {0, 0, 0, 0};
 
