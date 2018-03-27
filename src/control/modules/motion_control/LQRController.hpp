@@ -31,16 +31,18 @@ class LQRController {
         Eigen::Matrix<double, 4, 1> targetWheelVels =
             RobotModelControl.BotToWheel * target_mat;
 
-        auto steadyStateTerm = -(RobotModelControl.PinvB * RobotModelControl.A * targetWheelVels);
-        auto correctionTerm = -RobotModelControl.K * (wheelVels - targetWheelVels);
-        Eigen::Matrix<double, 4, 1> controlValues =  correctionTerm + steadyStateTerm;
+        // auto steadyStateTerm = -(RobotModelControl.PinvB * RobotModelControl.A * targetWheelVels);
+        // auto correctionTerm = -RobotModelControl.K * (wheelVels - targetWheelVels);
+        // Eigen::Matrix<double, 4, 1> controlValues =  correctionTerm + steadyStateTerm;
 
-        control_v += controlValues;
+        auto control_v = -RobotModelControl.K * (wheelVels - targetWheelVels);
+
+        // control_v += controlValues;
 
         std::array<int16_t, 4> control_duties;
         // limit output voltages to V_max
         for (std::size_t i = 0; i < control_duties.size(); ++i) {
-            control_duties[i] = control_v[i] / RobotModelControl.V_Max;
+            control_duties[i] = control_v[i] * FPGA::MAX_DUTY_CYCLE / RobotModelControl.V_Max;
         }
         // printf("Duties: %d %d %d %d\r\n", control_duties[0], control_duties[1], control_duties[2], control_duties[3]);
 
@@ -50,7 +52,7 @@ class LQRController {
    private:
     Eigen::Vector3f _targetVel{};
 
-    Eigen::Matrix<double, 4, 1> control_v = {0, 0, 0, 0};
+    // Eigen::Matrix<double, 4, 1> control_v = {0, 0, 0, 0};
 
     static const uint16_t ENC_TICKS_PER_TURN = 2048 * 3;
 };
