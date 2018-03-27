@@ -38,26 +38,28 @@ class LQRController {
         auto error = wheelVels - targetWheelVels;
         _wheelVelErrors += error * dt;
 
-        Eigen::VectorXd combined_state;
-        combined_state << wheelVels, _wheelVelErrors;
+        // Eigen::Matrix combined_state;
+        Eigen::MatrixXd combined_state(8, 1);
+        combined_state << wheelVels,
+                          _wheelVelErrors;
 
         auto control_v = -RobotModelControl.K * combined_state;
 
         // control_v += controlValues;
-
+        // printf("Control_v: %f\r\n", control_v(1,1));
         std::array<int16_t, 4> control_duties;
         // limit output voltages to V_max
         for (std::size_t i = 0; i < control_duties.size(); ++i) {
-            control_duties[i] = control_v[i] * FPGA::MAX_DUTY_CYCLE / RobotModelControl.V_Max;
+            control_duties[i] = control_v(i,1) * FPGA::MAX_DUTY_CYCLE; // / RobotModelControl.V_Max;
         }
-        // printf("Duties: %d %d %d %d\r\n", control_duties[0], control_duties[1], control_duties[2], control_duties[3]);
+        printf("Duties: %d %d %d %d\r\n", control_duties[0], control_duties[1], control_duties[2], control_duties[3]);
 
         return control_duties;
     }
 
    private:
     Eigen::Vector3f _targetVel{};
-    Eigen::Vector4d _wheelVelErrors = {0, 0, 0, 0};
+    Eigen::Matrix<double, 4, 1> _wheelVelErrors = {0, 0, 0, 0};
 
     // Eigen::Matrix<double, 4, 1> control_v = {0, 0, 0, 0};
 
