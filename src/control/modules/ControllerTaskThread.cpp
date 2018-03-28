@@ -59,10 +59,6 @@ void Task_Controller(const void* args) {
     const auto mainID =
         reinterpret_cast<const osThreadId>(const_cast<void*>(args));
 
-    printf("In task controller\r\n");
-    Eigen::Vector3f vec = {1.0, 1.0, 1.0};
-    controller.setTargetVel(vec);
-
     // Store the thread's ID
     const auto threadID = Thread::gettid();
     ASSERT(threadID != nullptr);
@@ -113,8 +109,8 @@ void Task_Controller(const void* args) {
     // pidController.setPidValues(3.0, 10, 2, 30, 0);
 
     // initialize timeout timer
-    // commandTimeoutTimer = make_unique<RtosTimerHelper>(
-        // [&]() { commandTimedOut = true; }, osTimerPeriodic);
+    commandTimeoutTimer = make_unique<RtosTimerHelper>(
+        [&]() { commandTimedOut = true; }, osTimerPeriodic);
 
     while (true) {
         imu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);

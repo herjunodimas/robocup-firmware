@@ -21,7 +21,7 @@ public:
     Eigen::Matrix<double, 4, 4> A;
     Eigen::Matrix<double, 4, 4> B;
     Eigen::Matrix<double, 4, 4> PinvB;
-    Eigen::Matrix<double, 4, 4> K;
+    Eigen::Matrix<double, 4, 8> K;
 
     /// Wheel angles (in radians) measured between +x axis and wheel axle
     std::array<double, 4> WheelAngles;
