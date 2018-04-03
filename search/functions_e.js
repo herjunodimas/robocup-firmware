@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['penaltydist',['PenaltyDist',['../struct_field___dimensions.html#acef9413dbbebc30418e9c4e75a6f6b5f',1,'Field_Dimensions']]],
+  ['penaltyshortdist',['PenaltyShortDist',['../struct_field___dimensions.html#a81382fdbcddb03b009608afab7adb75a',1,'Field_Dimensions']]],
   ['perpccw',['perpCCW',['../class_geometry2d_1_1_point.html#af7a65853916e74cbe125a0abc2b6d049',1,'Geometry2d::Point']]],
   ['perpcw',['perpCW',['../class_geometry2d_1_1_point.html#abd3f1f20685256a38bc7c2a6b264ac79',1,'Geometry2d::Point']]],
   ['pidtuner',['PidTuner',['../class_pid_tuner.html#a1edf021b14e973c96eb07e2ca4a2214d',1,'PidTuner']]],

@@ -12,7 +12,6 @@ var searchData=
   ['anglebetween',['angleBetween',['../class_geometry2d_1_1_point.html#a9147e66f7164f390dc416dda2dceb9a6',1,'Geometry2d::Point']]],
   ['aon_5fid',['AON_ID',['../deca__regs_8h.html#a7ffeee6d9c8e85864bbe38055aeb2426',1,'deca_regs.h']]],
   ['arc',['Arc',['../class_geometry2d_1_1_arc.html',1,'Geometry2d']]],
-  ['arcradius',['ArcRadius',['../struct_field___dimensions.html#a01d05184f9c582f489d4058f42e9644f',1,'Field_Dimensions']]],
   ['assign',['assign',['../classrtp_1_1_packet.html#a23de4f51fe48e6d30085a9c9c3647331',1,'rtp::Packet']]],
   ['attachinputhandler',['attachInputHandler',['../class_console.html#abce075310014fc23761f41e6952845fc',1,'Console']]],
   ['autoname',['AutoName',['../class_auto_name.html',1,'']]],

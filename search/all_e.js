@@ -3,7 +3,7 @@ var searchData=
   ['packet',['Packet',['../classrtp_1_1_packet.html',1,'rtp']]],
   ['panadr_5fid',['PANADR_ID',['../deca__regs_8h.html#a6f8f662a31326c024f62b720671615c6',1,'deca_regs.h']]],
   ['pc',['pc',['../class_console.html#a18f4d977f5003ed9fcea7f3861d461a8',1,'Console']]],
-  ['penaltydist',['PenaltyDist',['../struct_field___dimensions.html#acef9413dbbebc30418e9c4e75a6f6b5f',1,'Field_Dimensions']]],
+  ['penaltyshortdist',['PenaltyShortDist',['../struct_field___dimensions.html#a81382fdbcddb03b009608afab7adb75a',1,'Field_Dimensions']]],
   ['perpccw',['perpCCW',['../class_geometry2d_1_1_point.html#af7a65853916e74cbe125a0abc2b6d049',1,'Geometry2d::Point']]],
   ['perpcw',['perpCW',['../class_geometry2d_1_1_point.html#abd3f1f20685256a38bc7c2a6b264ac79',1,'Geometry2d::Point']]],
   ['phrmode',['phrMode',['../structdwt__config__t.html#ac7c4b2ae2a67e8b4a2f61ae1717ec5e4',1,'dwt_config_t']]],
