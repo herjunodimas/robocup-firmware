@@ -1,8 +1,6 @@
 var searchData=
 [
   ['m_5fchannel',['m_channel',['../classmbed_1_1_i2_c_driver.html#a6edb3a7172d31210d3a71e2b00b1299e',1,'mbed::I2CDriver']]],
-  ['mag',['mag',['../class_geometry2d_1_1_point.html#a9007ad178dcc9e07dbaf94c275d07304',1,'Geometry2d::Point']]],
-  ['magsq',['magsq',['../class_geometry2d_1_1_point.html#ac7fad9eb73c694f547b14a7bd891d09b',1,'Geometry2d::Point']]],
   ['mailhelper',['MailHelper',['../class_mail_helper.html',1,'']]],
   ['mbedtest',['MbedTest',['../namespace_mbed_test.html',1,'']]],
   ['mcp23017',['MCP23017',['../class_m_c_p23017.html',1,'']]],

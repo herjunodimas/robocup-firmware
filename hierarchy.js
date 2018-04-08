@@ -4,8 +4,6 @@ var hierarchy =
     [ "AnalogOut", null, [
       [ "Buzzer", "class_buzzer.html", null ]
     ] ],
-    [ "Geometry2d::Arc", "class_geometry2d_1_1_arc.html", null ],
-    [ "AutoName", "class_auto_name.html", null ],
     [ "BallSensor", "class_ball_sensor.html", null ],
     [ "mbed::I2CDriver::Channel", "structmbed_1_1_i2_c_driver_1_1_channel.html", null ],
     [ "command_t", "structcommand__t.html", null ],
@@ -26,8 +24,6 @@ var hierarchy =
     [ "dw1000_api::dwt_local_data_t", "structdw1000__api_1_1dwt__local__data__t.html", null ],
     [ "dwt_rxdiag_t", "structdwt__rxdiag__t.html", null ],
     [ "dwt_txconfig_t", "structdwt__txconfig__t.html", null ],
-    [ "Field_Dimensions", "struct_field___dimensions.html", null ],
-    [ "FIRFilter< T >", "class_f_i_r_filter.html", null ],
     [ "HackedKickerBoard", "class_hacked_kicker_board.html", null ],
     [ "rtp::Header", "structrtp_1_1_header.html", null ],
     [ "I2Cdev", "class_i2_cdev.html", null ],
@@ -51,10 +47,6 @@ var hierarchy =
         ] ]
       ] ]
     ] ],
-    [ "iterator", null, [
-      [ "ExceptionIterator< T >", "class_exception_iterator.html", null ]
-    ] ],
-    [ "Geometry2d::Line", "class_geometry2d_1_1_line.html", null ],
     [ "MailHelper< T, size >", "class_mail_helper.html", null ],
     [ "MCP23017", "class_m_c_p23017.html", null ],
     [ "motor_t", "structmotor__t.html", null ],
@@ -69,7 +61,6 @@ var hierarchy =
     [ "Pid", "class_pid.html", null ],
     [ "PidMotionController", "class_pid_motion_controller.html", null ],
     [ "PidTuner", "class_pid_tuner.html", null ],
-    [ "Geometry2d::Point", "class_geometry2d_1_1_point.html", null ],
     [ "Quaternion", "class_quaternion.html", null ],
     [ "RadioProtocol", "class_radio_protocol.html", null ],
     [ "registerSetting_t", "structregister_setting__t.html", null ],
@@ -82,14 +73,6 @@ var hierarchy =
     [ "RtosTimer", null, [
       [ "RtosTimerHelper", "class_rtos_timer_helper.html", null ]
     ] ],
-    [ "Geometry2d::Segment", "class_geometry2d_1_1_segment.html", null ],
-    [ "Geometry2d::Shape", "class_geometry2d_1_1_shape.html", [
-      [ "Geometry2d::Circle", "class_geometry2d_1_1_circle.html", null ],
-      [ "Geometry2d::CompositeShape", "class_geometry2d_1_1_composite_shape.html", null ],
-      [ "Geometry2d::Polygon", "class_geometry2d_1_1_polygon.html", null ],
-      [ "Geometry2d::Rect", "class_geometry2d_1_1_rect.html", null ]
-    ] ],
-    [ "Geometry2d::ShapeSet", "class_geometry2d_1_1_shape_set.html", null ],
     [ "SharedSPIDevice< DIGITAL_OUT >", "class_shared_s_p_i_device.html", null ],
     [ "SharedSPIDevice<>", "class_shared_s_p_i_device.html", [
       [ "AVR910", "class_a_v_r910.html", [
@@ -103,16 +86,15 @@ var hierarchy =
       [ "FPGA", "class_f_p_g_a.html", null ]
     ] ],
     [ "SoftwareSPI", "class_software_s_p_i.html", null ],
-    [ "MbedTest::SPI", "class_mbed_test_1_1_s_p_i.html", null ],
     [ "SPI", null, [
       [ "SharedSPI", "class_shared_s_p_i.html", null ]
     ] ],
+    [ "MbedTest::SPI", "class_mbed_test_1_1_s_p_i.html", null ],
     [ "StallDetection< Stall_kSpeed, Stall_kCommand, Stall_Threshold, Stall_Decay, Stall_Deadband >", "class_stall_detection.html", null ],
     [ "TimeoutLED", "class_timeout_l_e_d.html", [
       [ "FlashingTimeoutLED", "class_flashing_timeout_l_e_d.html", null ],
       [ "StrobingTimeoutLEDs< NUM_LEDS >", "class_strobing_timeout_l_e_ds.html", null ]
     ] ],
-    [ "Geometry2d::TransformMatrix", "class_geometry2d_1_1_transform_matrix.html", null ],
     [ "VectorFloat", "class_vector_float.html", null ],
     [ "VectorInt16", "class_vector_int16.html", null ],
     [ "Watchdog", "class_watchdog.html", null ]

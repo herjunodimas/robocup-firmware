@@ -30,15 +30,14 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"class_geometry2d_1_1_arc.html#ac1d8021f23be6757fcc348b69f7dc69f",
-"class_i_o_expander_digital_in_out.html#aadb911534925464a879aa7532185d26a",
-"class_m_p_u6050.html#aa23c8d66502345c30915e69975fd2cc9",
-"classdw1000__api.html#a0e71d5ee3dae6c49f15e1a0c2f392e19",
-"deca__regs_8h.html#a14850adc8b59dd13a5533cbb34b59446",
-"deca__regs_8h.html#a5d84324a65eb6070ba8b05321b8e0b4c",
-"deca__regs_8h.html#aa5ed9d2993937e4dc7356eb9a3f7f5e1",
-"deca__regs_8h.html#aeb67bb9ce9d4e0c2098c3650bc24b614",
-"structdw1000__api_1_1dwt__local__data__t.html#a3ec7e3f27da946461c16fbb807fa81da"
+"class_kicker_board.html#ad7fe6bbf240ec17f50d3b9551166ed95",
+"class_m_p_u6050.html#abb6bf6db86b84700c7f13bd838d63755",
+"classdw1000__api.html#a49b9068165b21da45cea70dfa3eebc2c",
+"deca__regs_8h.html#a1afd82a316bc8b000620c49c3e520817",
+"deca__regs_8h.html#a6220c5d7cb9e3c4fd03c5537f3daaa5a",
+"deca__regs_8h.html#aa9ed30ad442284e2533832975f7a7c99",
+"deca__regs_8h.html#af173ebe2ec472c031a6626267ca657a1",
+"structdwt__txconfig__t.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

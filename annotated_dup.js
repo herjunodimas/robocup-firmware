@@ -1,18 +1,5 @@
 var annotated_dup =
 [
-    [ "Geometry2d", null, [
-      [ "Arc", "class_geometry2d_1_1_arc.html", "class_geometry2d_1_1_arc" ],
-      [ "Circle", "class_geometry2d_1_1_circle.html", "class_geometry2d_1_1_circle" ],
-      [ "CompositeShape", "class_geometry2d_1_1_composite_shape.html", "class_geometry2d_1_1_composite_shape" ],
-      [ "Line", "class_geometry2d_1_1_line.html", "class_geometry2d_1_1_line" ],
-      [ "Point", "class_geometry2d_1_1_point.html", "class_geometry2d_1_1_point" ],
-      [ "Polygon", "class_geometry2d_1_1_polygon.html", "class_geometry2d_1_1_polygon" ],
-      [ "Rect", "class_geometry2d_1_1_rect.html", "class_geometry2d_1_1_rect" ],
-      [ "Segment", "class_geometry2d_1_1_segment.html", "class_geometry2d_1_1_segment" ],
-      [ "Shape", "class_geometry2d_1_1_shape.html", "class_geometry2d_1_1_shape" ],
-      [ "ShapeSet", "class_geometry2d_1_1_shape_set.html", "class_geometry2d_1_1_shape_set" ],
-      [ "TransformMatrix", "class_geometry2d_1_1_transform_matrix.html", "class_geometry2d_1_1_transform_matrix" ]
-    ] ],
     [ "mbed", null, [
       [ "I2CDriver", "classmbed_1_1_i2_c_driver.html", "classmbed_1_1_i2_c_driver" ],
       [ "I2CMasterRtos", "classmbed_1_1_i2_c_master_rtos.html", "classmbed_1_1_i2_c_master_rtos" ],
@@ -29,7 +16,6 @@ var annotated_dup =
       [ "RobotTxMessage", "structrtp_1_1_robot_tx_message.html", "structrtp_1_1_robot_tx_message" ]
     ] ],
     [ "agc_cfg_struct", "structagc__cfg__struct.html", "structagc__cfg__struct" ],
-    [ "AutoName", "class_auto_name.html", "class_auto_name" ],
     [ "AVR910", "class_a_v_r910.html", "class_a_v_r910" ],
     [ "BallSensor", "class_ball_sensor.html", "class_ball_sensor" ],
     [ "Buzzer", "class_buzzer.html", "class_buzzer" ],
@@ -48,9 +34,6 @@ var annotated_dup =
     [ "dwt_deviceentcnts_t", "structdwt__deviceentcnts__t.html", "structdwt__deviceentcnts__t" ],
     [ "dwt_rxdiag_t", "structdwt__rxdiag__t.html", "structdwt__rxdiag__t" ],
     [ "dwt_txconfig_t", "structdwt__txconfig__t.html", "structdwt__txconfig__t" ],
-    [ "ExceptionIterator", "class_exception_iterator.html", "class_exception_iterator" ],
-    [ "Field_Dimensions", "struct_field___dimensions.html", "struct_field___dimensions" ],
-    [ "FIRFilter", "class_f_i_r_filter.html", "class_f_i_r_filter" ],
     [ "FlashingTimeoutLED", "class_flashing_timeout_l_e_d.html", "class_flashing_timeout_l_e_d" ],
     [ "FPGA", "class_f_p_g_a.html", "class_f_p_g_a" ],
     [ "HackedKickerBoard", "class_hacked_kicker_board.html", "class_hacked_kicker_board" ],

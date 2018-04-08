@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['field_5fdimensions',['Field_Dimensions',['../struct_field___dimensions.html',1,'']]],
-  ['firfilter',['FIRFilter',['../class_f_i_r_filter.html',1,'']]],
   ['flash',['flash',['../class_kicker_board.html#a61455be0828684366a62465ddb33fdb5',1,'KickerBoard']]],
   ['flashingtimeoutled',['FlashingTimeoutLED',['../class_flashing_timeout_l_e_d.html',1,'']]],
   ['flush',['Flush',['../class_console.html#a8c948f8da92c34c8d02125783ce01020',1,'Console']]],

@@ -110,6 +110,5 @@ var searchData=
   ['getzeromotiondetectionthreshold',['getZeroMotionDetectionThreshold',['../class_m_p_u6050.html#ad941c1e844dc9230675c115734599ea3',1,'MPU6050']]],
   ['getzgyrofifoenabled',['getZGyroFIFOEnabled',['../class_m_p_u6050.html#adbbbd131c74f37dd545403633eb317ff',1,'MPU6050']]],
   ['getznegmotiondetected',['getZNegMotionDetected',['../class_m_p_u6050.html#a3601b732eb15644212b8f29cf396e142',1,'MPU6050']]],
-  ['getzposmotiondetected',['getZPosMotionDetected',['../class_m_p_u6050.html#a33c766cd415fc5780417b1ed76717875',1,'MPU6050']]],
-  ['goalflat',['GoalFlat',['../struct_field___dimensions.html#a12e1adb8899f6b963e7e8f1d5d964d8d',1,'Field_Dimensions']]]
+  ['getzposmotiondetected',['getZPosMotionDetected',['../class_m_p_u6050.html#a33c766cd415fc5780417b1ed76717875',1,'MPU6050']]]
 ];

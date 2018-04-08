@@ -1,14 +1,11 @@
 var searchData=
 [
   ['cc1201',['CC1201',['../class_c_c1201.html',1,'CC1201'],['../class_c_c1201.html#a8381abed7da4e387921dae94c198b620',1,'CC1201::CC1201()']]],
-  ['centerradius',['CenterRadius',['../struct_field___dimensions.html#aecc66ef950ceee7a15a435f1e1e4a238',1,'Field_Dimensions']]],
   ['chan',['chan',['../structdwt__config__t.html#ae0803054462084cfef7e90648a6188d9',1,'dwt_config_t']]],
   ['chan_5fctrl_5fid',['CHAN_CTRL_ID',['../deca__regs_8h.html#a659796dad40972afb8d683ef325873bf',1,'deca_regs.h']]],
   ['channel',['Channel',['../structmbed_1_1_i2_c_driver_1_1_channel.html',1,'mbed::I2CDriver']]],
   ['checkmemory',['checkMemory',['../class_a_v_r910.html#a3d5e6c907a6c31e47e05557fc713f0f0',1,'AVR910']]],
-  ['circle',['Circle',['../class_geometry2d_1_1_circle.html',1,'Geometry2d']]],
-  ['clamp',['clamp',['../class_geometry2d_1_1_point.html#adf38c5f284b65bff27b654fcb6ec5886',1,'Geometry2d::Point']]],
-  ['clear',['clear',['../class_geometry2d_1_1_composite_shape.html#ae8a9e41ef5fe8929ca8a058236032c4a',1,'Geometry2d::CompositeShape::clear()'],['../class_geometry2d_1_1_shape_set.html#aae03f5ef559ef96e06129c61e27e672c',1,'Geometry2d::ShapeSet::clear()'],['../class_neo_strip.html#aabfa67bbc4f42769d7913fb3323b67ad',1,'NeoStrip::clear()']]],
+  ['clear',['clear',['../class_neo_strip.html#aabfa67bbc4f42769d7913fb3323b67ad',1,'NeoStrip']]],
   ['clearwindup',['clearWindup',['../class_pid.html#a63308bb7bc14653d961b1f79f1824aaf',1,'Pid']]],
   ['close',['close',['../class_comm_module.html#a92a7d9bda91e1533f1110182508abe11',1,'CommModule']]],
   ['command_5fbreak_5fmsg',['COMMAND_BREAK_MSG',['../class_console.html#a4cb18c172823884348832b52817fa9c2',1,'Console']]],
@@ -17,11 +14,9 @@ var searchData=
   ['commlink',['CommLink',['../class_comm_link.html',1,'CommLink'],['../class_comm_link.html#a78c28f48088fa999b3b258f8e32015cd',1,'CommLink::CommLink()']]],
   ['commmodule',['CommModule',['../class_comm_module.html',1,'CommModule'],['../class_comm_module.html#a0ff8d8d5998430766d111072edaaf5b1',1,'CommModule::CommModule()']]],
   ['commport',['CommPort',['../class_comm_port.html',1,'']]],
-  ['compositeshape',['CompositeShape',['../class_geometry2d_1_1_composite_shape.html',1,'Geometry2d']]],
   ['config',['config',['../class_m_c_p23017.html#a0012ecd9ece2bbe2f1ac473abf76fe29',1,'MCP23017']]],
   ['configure',['configure',['../class_f_p_g_a.html#afc8d26c5164d391fe9916f4f626e4f9c',1,'FPGA']]],
   ['confmessage',['ConfMessage',['../structrtp_1_1_conf_message.html',1,'rtp']]],
   ['console',['Console',['../class_console.html',1,'']]],
-  ['containsvertex',['containsVertex',['../class_geometry2d_1_1_polygon.html#a93a9c936d6e76f371bf03d4ecbdab9e8',1,'Geometry2d::Polygon']]],
   ['controlmessage',['ControlMessage',['../structrtp_1_1_control_message.html',1,'rtp']]]
 ];

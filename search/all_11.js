@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['saturate',['saturate',['../class_geometry2d_1_1_point.html#a554b018bc94a2e9a07e4c0c4b95b6838',1,'Geometry2d::Point']]],
-  ['segment',['Segment',['../class_geometry2d_1_1_segment.html',1,'Geometry2d']]],
   ['selftest',['selfTest',['../class_c_c1201.html#a6463819e64582f1f6e74e26bcc0e440c',1,'CC1201::selfTest()'],['../class_decawave.html#a358520a538d53c0d1c56071b273cea2b',1,'Decawave::selfTest()'],['../class_comm_link.html#a43c1119c09f26dba0e816f57bf1d70e0',1,'CommLink::selfTest()'],['../class_dummy_link.html#a4d45f0f4cf93043b330fb8316c50bce4',1,'DummyLink::selfTest()']]],
   ['send',['send',['../class_comm_module.html#a762e7d82c7bae22145d40bbc8cfa3ec0',1,'CommModule']]],
   ['sendpacket',['sendPacket',['../class_c_c1201.html#af05dd655d9f1239ca538cc182aadafe6',1,'CC1201::sendPacket()'],['../class_decawave.html#af7c1f9dc18465667ac3d5d2dfc31ccac',1,'Decawave::sendPacket()'],['../class_comm_link.html#af83b2e5cdbc5b36581e550f7a55a2ef2',1,'CommLink::sendPacket()'],['../class_dummy_link.html#a75ee6ad438d18c500e11e89f8fe56958',1,'DummyLink::sendPacket()']]],
@@ -18,7 +16,6 @@ var searchData=
   ['setchargeallowed',['setChargeAllowed',['../class_kicker_board.html#a5caa81abc585544ba6122f237f9d6a31',1,'KickerBoard']]],
   ['setclockoutputenabled',['setClockOutputEnabled',['../class_m_p_u6050.html#a71ec4642b6f6c937bbf6a24fea4179e5',1,'MPU6050']]],
   ['setclocksource',['setClockSource',['../class_m_p_u6050.html#a4c1cd147d038e024bdeaa053c4d77734',1,'MPU6050']]],
-  ['setcoeffs',['setCoeffs',['../class_f_i_r_filter.html#ac3ce994b4706cbe70027320275e5f4dc',1,'FIRFilter']]],
   ['setconfig',['setConfig',['../class_c_c1201.html#a758e241be6292a2e28837fa11f20754d',1,'CC1201']]],
   ['setdebugenabled',['setDebugEnabled',['../class_c_c1201.html#a0c856be77f27c823533eb8d7adef04df',1,'CC1201']]],
   ['setdhpfmode',['setDHPFMode',['../class_m_p_u6050.html#a44cc43aaad1e52c1ba3142d4490af611',1,'MPU6050']]],
@@ -92,9 +89,6 @@ var searchData=
   ['setzeromotiondetectionthreshold',['setZeroMotionDetectionThreshold',['../class_m_p_u6050.html#a347a51fd25de20b9ead4659015ef793b',1,'MPU6050']]],
   ['setzgyrofifoenabled',['setZGyroFIFOEnabled',['../class_m_p_u6050.html#af5b5bc39b66466ba910f6eef1259444c',1,'MPU6050']]],
   ['sfdto',['sfdTO',['../structdwt__config__t.html#a3e02b0ef49a41cdfef4c090c75b21098',1,'dwt_config_t']]],
-  ['shape',['Shape',['../class_geometry2d_1_1_shape.html',1,'Geometry2d']]],
-  ['shapeset',['ShapeSet',['../class_geometry2d_1_1_shape_set.html',1,'Geometry2d']]],
-  ['shapeset',['ShapeSet',['../class_geometry2d_1_1_shape_set.html#a5c0ed4dae2daee13389ab15697e66d35',1,'Geometry2d::ShapeSet']]],
   ['sharedspi',['SharedSPI',['../class_shared_s_p_i.html',1,'']]],
   ['sharedspidevice',['SharedSPIDevice',['../class_shared_s_p_i_device.html',1,'']]],
   ['sharedspidevice_3c_3e',['SharedSPIDevice&lt;&gt;',['../class_shared_s_p_i_device.html',1,'']]],

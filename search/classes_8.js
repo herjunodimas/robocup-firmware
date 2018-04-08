@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kickerboard',['KickerBoard',['../class_kicker_board.html',1,'']]]
+  ['loghelper',['LogHelper',['../class_log_helper.html',1,'']]]
 ];
